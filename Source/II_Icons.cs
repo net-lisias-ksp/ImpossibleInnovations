@@ -27,15 +27,15 @@ namespace ImpossibleInnovations
             selectedLegacy.LoadImage(File.ReadAllBytes("GameData/ImpossibleInnovations/Plugins/PluginData/SmallLogoGreyON.png"));
             RUI.Icons.Selectable.Icon filterIconLegacy = new RUI.Icons.Selectable.Icon("II_filter_icon_legacy", unselectedLegacy, selectedLegacy); //Defining filterIconLegacy
 
-            PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter("Impossible Innovations", filterIcon, Color.white);
+			PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter("ImpossibleInnovations", "Impossible Innovations", filterIcon, Color.white);
 
             //filters for all II parts
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "All Impossible Innovations Parts", filterIcon, o => o.manufacturer == "Impossible Innovations" && !o.title.Contains("(LEGACY)"));
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "Deuterium" || q.resourceName == "Tritium") && p.manufacturer == "Impossible Innovations");
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", filterIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == "Impossible Innovations");
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "CL-20 Boosters", filterIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == "Impossible Innovations");
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Ionized Wings", filterIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == "Impossible Innovations");
-            PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Legacy Parts", filterIconLegacy, v => v.title.Contains("(LEGACY)") && v.manufacturer == "Impossible Innovations");
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "AllParts", "All Impossible Innovations Parts", filterIcon, o => o.manufacturer == "Impossible Innovations" && !o.title.Contains("(LEGACY)"));
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "Deuterium" || q.resourceName == "Tritium") && p.manufacturer == "Impossible Innovations");
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", "Engines", filterIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == "Impossible Innovations");
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "BoostersCL20", "CL-20 Boosters", filterIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == "Impossible Innovations");
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "WingsIonized", "Ionized Wings", filterIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == "Impossible Innovations");
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Legacy", "Legacy Parts", filterIconLegacy, v => v.title.Contains("(LEGACY)") && v.manufacturer == "Impossible Innovations");
         }
 
         private void Awake()
