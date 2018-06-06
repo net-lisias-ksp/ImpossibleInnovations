@@ -1,3 +1,10 @@
+0.8.7.8:
+	Unofficial (Pre) Release for KSP 1.4.x
+	Icons and Images were not being fetched from the right place.
+	Somewhat tested, but not properly.
+0.8.7.7:
+	Unofficial (Pre) Release for KSP 1.4.x (UNTESTED)
+	ModuleManager and TweakScale updated to latest.
 0.8.7.6:
 	Updated depended mods in package for those who aren't using CKAN
 	Recompiled code for KSP version 1.2
