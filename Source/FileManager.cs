@@ -13,7 +13,7 @@ namespace ImpossibleInnovations
 	public static class FileManager
 	{
 
-		public static readonly string PLUGINDATA_PATHNAME = FileManager.FULLPATHNAME(String.Format("{0}/{1}/{2}/Plugins/PluginData", Constants.GAMEDATA, Constants.ROOT, Constants.PLUGIN_ID));
+		public static readonly string PLUGINDATA_PATHNAME = FileManager.FULLPATHNAME(String.Format("{0}/{1}/{2}/Plugins/Icons", Constants.GAMEDATA, Constants.ROOT, Constants.PLUGIN_ID));
 
 		public static string FULLPATHNAME(string pathname)
 		{
