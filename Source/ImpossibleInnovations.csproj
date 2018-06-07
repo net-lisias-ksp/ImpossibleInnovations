@@ -54,7 +54,7 @@
     <Compile Include="II_Icons.cs" />
     <Compile Include="II_Utilities.cs" />
     <Compile Include="ModuleIIPoof.cs" />
-    <Compile Include="MoudleIIIonWing.cs" />
+    <Compile Include="ModuleIIIonWing.cs" />
     <Compile Include="ModuleIIHydrogenIntake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FileManager.cs" />
