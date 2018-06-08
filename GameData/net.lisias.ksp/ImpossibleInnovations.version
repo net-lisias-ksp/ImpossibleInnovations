@@ -1,7 +1,13 @@
 {
 	"NAME":"Impossible Innovations Unofficial",
-	"URL":"https://raw.githubusercontent.com/net-lisias-ksp/ImpossibleInnovations/master/GameData/ImpossibleInnovations/MiniAVC/ImpossibleInnovations.version",
+	"URL":"http://ksp.lisias.net/content/add-ons/ImpossibleInnovations.version",
 	"DOWNLOAD":"https://github.com/net-lisias-ksp/ImpossibleInnovations/releases",
+	"CHANGE_LOG":"https://raw.githubusercontent.com/net-lisias-ksp/ImpossibleInnovations/master/Changelog.txt",
+	"GITHUB": {
+		"USERNAME":"net.lisias.ksp",
+		"REPOSITORY":"ImpossibleInnovations",
+		"ALLOW_PRE_RELEASE":false
+	},
 	"VERSION":{
 		"MAJOR":0,
 		"MINOR":8,
