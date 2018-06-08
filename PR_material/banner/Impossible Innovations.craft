@@ -1,0 +1,6459 @@
+ship = Impossible Innovations
+version = 1.4.1
+description = 
+type = VAB
+size = 7.40005112,41.1938286,7.40005112
+persistentId = 2063624328
+rot = 0,0,0,0
+missionFlag = Squad/Flags/default
+vesselType = Debris
+PART
+{
+	part = II-largePod_4294710280
+	partName = Part
+	persistentId = 2290571221
+	pos = 0,41.8000031,-0.200000003
+	attPos = -0.0555803105,24.4593945,-0.0426542014
+	attPos0 = 0.0555803105,17.3406086,-0.157345802
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0.707106829,0,0.707106829
+	attRot0 = 0,0.707106829,0,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = Separator.2_4294456344
+	link = II-para_4293919308
+	attN = bottom,Separator.2_4294456344_0|-0.48224|0
+	attN = top,II-para_4293919308_0|1.28319|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			MakeReferenceToggle
+			{
+				actionGroup = None
+			}
+			HibernateToggle
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		actuatorModeCycle = 0
+		authorityLimiter = 100
+		stateString = Active
+		stagingEnabled = True
+		WheelState = Active
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CycleAction
+			{
+				actionGroup = None
+			}
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Tritium
+		amount = 300
+		maxAmount = 300
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = Separator.2_4294456344
+	partName = Part
+	persistentId = 226511681
+	pos = 0,41.217762,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-0.582241058,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 1
+	sidx = 0
+	sqor = 0
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-strongSASLarge_4294421138
+	attN = top,II-largePod_4294710280_0|0.1|0
+	attN = bottom,II-strongSASLarge_4294421138_0|-0.1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 775
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-strongSASLarge_4294421138
+	partName = Part
+	persistentId = 1412673541
+	pos = 0,40.9777603,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-0.239999771,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-deuteriumx2_4294446854
+	attN = top,Separator.2_4294456344_0|0.14|0
+	attN = bottom,II-deuteriumx2_4294446854_0|-0.14|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		actuatorModeCycle = 0
+		authorityLimiter = 100
+		stateString = Active
+		stagingEnabled = True
+		WheelState = Active
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CycleAction
+			{
+				actionGroup = None
+			}
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx2_4294446854
+	partName = Part
+	persistentId = 2737834644
+	pos = 0,39.9002609,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-1.07749939,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 14000
+	modMass = 1.39999998
+	modSize = 0,0,0
+	link = II-HEDeuteriumEngine_4294443264
+	attN = top,II-strongSASLarge_4294421138_0|0.46875|0
+	attN = bottom,II-HEDeuteriumEngine_4294443264_0|-0.46875|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (0.5, 0.5, 0.5)
+		DryCost = 15997.7598
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 8000
+		maxAmount = 8000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-HEDeuteriumEngine_4294443264
+	partName = Part
+	persistentId = 3943049748
+	pos = 0,38.9627609,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-0.9375,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = 0
+	sqor = 1
+	sepI = 0
+	attm = 0
+	modCost = 4550
+	modMass = 4.20000029
+	modSize = 0,0,0
+	link = Separator.2_4294433092
+	attN = top,II-deuteriumx2_4294446854_0|0|0
+	attN = bottom,Separator.2_4294433092_0|-0.75|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		activejettisonName = node_fairing_collider
+		isJettisoned = False
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (2, 2, 2)
+		DryCost = 5200
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = Separator.2_4294433092
+	partName = Part
+	persistentId = 3202325429
+	pos = 0,37.3627625,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-0.850000381,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 3
+	sidx = 0
+	sqor = 2
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294206650
+	attN = top,II-HEDeuteriumEngine_4294443264_0|0.1|0
+	attN = bottom,II-deuteriumx8_4294206650_0|-0.1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 775
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294206650
+	partName = Part
+	persistentId = 499585103
+	pos = 0,33.3277588,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-2.06750107,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294204324
+	attN = top,Separator.2_4294433092_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294204324_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294204324
+	partName = Part
+	persistentId = 3809069202
+	pos = 0,25.4577618,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-7.86999893,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294700140
+	attN = top,II-deuteriumx8_4294206650_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294700140_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294700140
+	partName = Part
+	persistentId = 151587264
+	pos = 0,17.5877628,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-7.86999893,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294695402
+	link = radialDecoupler_4294396524
+	link = radialDecoupler_4294394958
+	link = radialDecoupler_4294394896
+	link = radialDecoupler_4294394834
+	link = II-deuteriumx8_4294388294
+	link = II-deuteriumx8_4294377276
+	link = II-deuteriumx8_4294377158
+	link = II-deuteriumx8_4294377040
+	attN = top,II-deuteriumx8_4294204324_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294695402_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294695402
+	partName = Part
+	persistentId = 2142470017
+	pos = 0,9.71776581,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-5.9024992,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = adapterLargeSmallQuad_4294671042
+	link = radialDecoupler_4294087910
+	link = radialDecoupler_4294087286
+	link = radialDecoupler_4294087224
+	link = radialDecoupler_4294087162
+	attN = top,II-deuteriumx8_4294700140_0|1.9675|0
+	attN = bottom,adapterLargeSmallQuad_4294671042_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = adapterLargeSmallQuad_4294671042
+	partName = Part
+	persistentId = 3756451415
+	pos = 0,5.78276443,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,-3.93499947,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-standardDeuteriumEngine_4294663626
+	link = II-standardDeuteriumEngine_4294663274
+	link = II-standardDeuteriumEngine_4294663126
+	link = II-standardDeuteriumEngine_4294662978
+	attN = top,II-deuteriumx8_4294695402_0|0|0
+	attN = bottom01,II-standardDeuteriumEngine_4294663274_0.625|-0.75|0.625
+	attN = bottom02,II-standardDeuteriumEngine_4294663126_0.625|-0.75|-0.625
+	attN = bottom03,II-standardDeuteriumEngine_4294663626_-0.625|-0.75|0.625
+	attN = bottom04,II-standardDeuteriumEngine_4294662978_-0.625|-0.75|-0.625
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 2.5
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 800
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-standardDeuteriumEngine_4294663626
+	partName = Part
+	persistentId = 480328887
+	pos = 0.625000477,4.13093948,0.42500031
+	attPos = 0,0,0
+	attPos0 = -0.625,-1.65182686,0.625
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 5
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-standardDeuteriumEngine_4294663274
+	sym = II-standardDeuteriumEngine_4294663126
+	sym = II-standardDeuteriumEngine_4294662978
+	attN = top,adapterLargeSmallQuad_4294671042_0|0.9018263|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		activejettisonName = fairing
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 1500
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-standardDeuteriumEngine_4294663274
+	partName = Part
+	persistentId = 724237722
+	pos = 0.625000358,4.13093948,-0.825000465
+	attPos = 0,0,0
+	attPos0 = 0.625,-1.65182686,0.625
+	rot = 0,1.00000012,0,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106829,0,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 5
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-standardDeuteriumEngine_4294663626
+	sym = II-standardDeuteriumEngine_4294663126
+	sym = II-standardDeuteriumEngine_4294662978
+	attN = top,adapterLargeSmallQuad_4294671042_0|0.9018263|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		activejettisonName = fairing
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 1500
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-standardDeuteriumEngine_4294663126
+	partName = Part
+	persistentId = 1550964676
+	pos = -0.625000477,4.13093948,-0.825000286
+	attPos = 0,0,0
+	attPos0 = 0.625,-1.65182686,-0.625
+	rot = 0,0.707106769,0,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,-4.37113883E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 5
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-standardDeuteriumEngine_4294663626
+	sym = II-standardDeuteriumEngine_4294663274
+	sym = II-standardDeuteriumEngine_4294662978
+	attN = top,adapterLargeSmallQuad_4294671042_0|0.9018263|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		activejettisonName = fairing
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 1500
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-standardDeuteriumEngine_4294662978
+	partName = Part
+	persistentId = 3398430490
+	pos = -0.625000358,4.13093948,0.425000489
+	attPos = 0,0,0
+	attPos0 = -0.625,-1.65182686,-0.625
+	rot = 0,0,0,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106829,0,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 5
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-standardDeuteriumEngine_4294663626
+	sym = II-standardDeuteriumEngine_4294663274
+	sym = II-standardDeuteriumEngine_4294663126
+	attN = top,adapterLargeSmallQuad_4294671042_0|0.9018263|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		activejettisonName = fairing
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 1500
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialDecoupler_4294396524
+	partName = Part
+	persistentId = 768161762
+	pos = 2.38418579E-07,14.8204346,1.01703691
+	attPos = 0,0,0
+	attPos0 = -1.21703613,-2.76732826,7.4505806E-08
+	rot = -1.34139566E-06,0.707106829,-1.34139566E-06,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,-1.89701984E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = radialDecoupler_4294394958
+	sym = radialDecoupler_4294394896
+	sym = radialDecoupler_4294394834
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294394958
+	partName = Part
+	persistentId = 3039122891
+	pos = 1.21703684,14.8204346,-0.200000122
+	attPos = 0,0,0
+	attPos0 = 1.96479544E-09,-2.76732826,1.21703601
+	rot = -1.89702007E-06,1.00000012,0,0
+	attRot = 0,0,0,1
+	attRot0 = -1.34139566E-06,0.707106829,-1.34139566E-06,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = radialDecoupler_4294396524
+	sym = radialDecoupler_4294394896
+	sym = radialDecoupler_4294394834
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294394896
+	partName = Part
+	persistentId = 266502287
+	pos = -3.57627897E-07,14.8204346,-1.41703701
+	attPos = 0,0,0
+	attPos0 = 1.21703613,-2.76732826,-1.78813934E-07
+	rot = -1.34139555E-06,0.707106769,1.34139577E-06,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = -1.89701984E-06,1,8.29213678E-14,-4.37113883E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = radialDecoupler_4294396524
+	sym = radialDecoupler_4294394958
+	sym = radialDecoupler_4294394834
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294394834
+	partName = Part
+	persistentId = 2046477762
+	pos = -1.21703684,14.8204346,-0.199999765
+	attPos = 0,0,0
+	attPos0 = -1.47046805E-07,-2.76732826,-1.21703601
+	rot = 0,0,1.89702007E-06,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = -1.34139566E-06,0.707106829,1.34139566E-06,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 3
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 3
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = radialDecoupler_4294396524
+	sym = radialDecoupler_4294394958
+	sym = radialDecoupler_4294394896
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294388294
+	partName = Part
+	persistentId = 13603140
+	pos = 4.76837158E-07,17.3225384,2.24997807
+	attPos = 0,0,0
+	attPos0 = -2.44997644,-0.265224457,2.83122063E-07
+	rot = 1.3343622E-06,0.707106888,1.33436197E-06,0.707106769
+	attRot = 0,0,0,1
+	attRot0 = 8.03887393E-14,8.42937027E-08,1.88707281E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294390740
+	link = II-deuteriumx8_4294203238
+	sym = II-deuteriumx8_4294377276
+	sym = II-deuteriumx8_4294377158
+	sym = II-deuteriumx8_4294377040
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	attN = top,II-deuteriumx8_4294203238_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294390740_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294390740
+	partName = Part
+	persistentId = 1082164170
+	pos = 4.76837158E-07,9.45253754,2.24996352
+	attPos = 0,0,0
+	attPos0 = -2.43465877,14.4776735,5.17006397
+	rot = -7.03364567E-09,0.707106888,-7.03341918E-09,0.707106769
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = pointyNoseConeB_4294362648
+	sym = II-deuteriumx8_4294377214
+	sym = II-deuteriumx8_4294377096
+	sym = II-deuteriumx8_4294376978
+	attN = top,II-deuteriumx8_4294388294_0|1.9675|0
+	attN = bottom,pointyNoseConeB_4294362648_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = pointyNoseConeB_4294362648
+	partName = Part
+	persistentId = 2504914810
+	pos = 4.76837158E-07,4.26754379,2.24996352
+	attPos = 0,0,0
+	attPos0 = 8.86029738E-09,-4.56000042,-1.50258213E-12
+	rot = 0,2.49205105E-12,1.00000012,6.5931917E-13
+	attRot = 0,0,0.999999881,0
+	attRot0 = -0.707106888,-7.03357728E-09,0.707106769,-7.03346359E-09
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 960
+	modMass = 0.225000009
+	modSize = 0,0,0
+	sym = pointyNoseConeB_4294362796
+	sym = pointyNoseConeB_4294362600
+	sym = pointyNoseConeB_4294362552
+	attN = bottom01,II-deuteriumx8_4294390740_0|-0.625|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1280
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294377276
+	partName = Part
+	persistentId = 2423207659
+	pos = 2.44997787,17.3225384,-0.20000048
+	attPos = 0,0,0
+	attPos0 = 1.37092073E-07,-0.265224457,2.44997621
+	rot = 1.88707304E-06,1.00000012,0,-1.1920929E-07
+	attRot = 0,0,0,1
+	attRot0 = 1.33436197E-06,0.707106829,1.33436185E-06,0.707106709
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294377214
+	link = II-deuteriumx8_4294201680
+	sym = II-deuteriumx8_4294388294
+	sym = II-deuteriumx8_4294377158
+	sym = II-deuteriumx8_4294377040
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	attN = top,II-deuteriumx8_4294201680_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294377214_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294377214
+	partName = Part
+	persistentId = 1159068923
+	pos = 2.44996333,9.45253754,-0.20000048
+	attPos = 0,0,0
+	attPos0 = -2.43465877,14.4776735,5.17006397
+	rot = -9.94714178E-09,1.00000012,0,-1.1920929E-07
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = pointyNoseConeB_4294362796
+	sym = II-deuteriumx8_4294390740
+	sym = II-deuteriumx8_4294377096
+	sym = II-deuteriumx8_4294376978
+	attN = top,II-deuteriumx8_4294377276_0|1.9675|0
+	attN = bottom,pointyNoseConeB_4294362796_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = pointyNoseConeB_4294362796
+	partName = Part
+	persistentId = 3379489787
+	pos = 2.44996333,4.26754379,-0.20000048
+	attPos = 0,0,0
+	attPos0 = 8.85665941E-09,-4.56000042,-2.9079586E-12
+	rot = 0.707106888,1.60777479E-13,0.707106888,8.03887393E-14
+	attRot = 0,0,0.999999881,0
+	attRot0 = -0.707106829,-7.03369096E-09,0.707106709,-7.03346359E-09
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 960
+	modMass = 0.225000009
+	modSize = 0,0,0
+	sym = pointyNoseConeB_4294362648
+	sym = pointyNoseConeB_4294362600
+	sym = pointyNoseConeB_4294362552
+	attN = bottom01,II-deuteriumx8_4294377214_0|-0.625|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1280
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294377158
+	partName = Part
+	persistentId = 1972000263
+	pos = -7.15255794E-07,17.3225384,-2.64997816
+	attPos = 0,0,0
+	attPos0 = 2.44997644,-0.265224457,-4.91738319E-07
+	rot = 1.33436197E-06,0.707106709,-1.3343622E-06,-0.707106948
+	attRot = 0,0,0,1
+	attRot0 = 1.88707281E-06,1,-1.62875315E-13,-1.28005098E-07
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294377096
+	link = II-deuteriumx8_4294201556
+	sym = II-deuteriumx8_4294388294
+	sym = II-deuteriumx8_4294377276
+	sym = II-deuteriumx8_4294377040
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	attN = top,II-deuteriumx8_4294201556_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294377096_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294377096
+	partName = Part
+	persistentId = 3468961373
+	pos = -7.15255794E-07,9.45253754,-2.64996362
+	attPos = 0,0,0
+	attPos0 = -2.43465877,14.4776735,5.17006397
+	rot = -7.03341918E-09,0.707106709,7.03364567E-09,-0.707106948
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = pointyNoseConeB_4294362600
+	sym = II-deuteriumx8_4294390740
+	sym = II-deuteriumx8_4294377214
+	sym = II-deuteriumx8_4294376978
+	attN = top,II-deuteriumx8_4294377158_0|1.9675|0
+	attN = bottom,pointyNoseConeB_4294362600_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = pointyNoseConeB_4294362600
+	partName = Part
+	persistentId = 2906173996
+	pos = -7.15255794E-07,4.26754379,-2.64996362
+	attPos = 0,0,0
+	attPos0 = 8.86029738E-09,-4.56000042,-2.31145832E-13
+	rot = 1.00000012,0,-1.1920929E-07,0
+	attRot = 0,0,0.999999881,0
+	attRot0 = -0.707106829,-7.03369096E-09,0.707106709,-7.03346359E-09
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 960
+	modMass = 0.225000009
+	modSize = 0,0,0
+	sym = pointyNoseConeB_4294362796
+	sym = pointyNoseConeB_4294362648
+	sym = pointyNoseConeB_4294362552
+	attN = bottom01,II-deuteriumx8_4294377096_0|-0.625|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1280
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294377040
+	partName = Part
+	persistentId = 3857465053
+	pos = -2.44997787,17.3225384,-0.199999288
+	attPos = 0,0,0
+	attPos0 = -4.2915201E-07,-0.265224457,-2.44997621
+	rot = 0,-1.1920929E-07,-1.88707304E-06,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = 1.33436185E-06,0.707106709,-1.33436197E-06,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294376978
+	link = II-deuteriumx8_4294201432
+	sym = II-deuteriumx8_4294388294
+	sym = II-deuteriumx8_4294377276
+	sym = II-deuteriumx8_4294377158
+	srfN = srfAttach,II-deuteriumx8_4294700140
+	attN = top,II-deuteriumx8_4294201432_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294376978_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294376978
+	partName = Part
+	persistentId = 1714348168
+	pos = -2.44996333,9.45253754,-0.199999288
+	attPos = 0,0,0
+	attPos0 = -2.43465877,14.4776735,5.17006397
+	rot = 0,-1.1920929E-07,9.94714178E-09,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = pointyNoseConeB_4294362552
+	sym = II-deuteriumx8_4294390740
+	sym = II-deuteriumx8_4294377214
+	sym = II-deuteriumx8_4294377096
+	attN = top,II-deuteriumx8_4294377040_0|1.9675|0
+	attN = bottom,pointyNoseConeB_4294362552_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = pointyNoseConeB_4294362552
+	partName = Part
+	persistentId = 3982605043
+	pos = -2.44996333,4.26754379,-0.199999288
+	attPos = 0,0,0
+	attPos0 = 8.85665941E-09,-4.56000042,-1.7947384E-13
+	rot = 0.707106888,0,-0.707106888,0
+	attRot = 0,0,0.999999881,0
+	attRot0 = -0.707106829,-7.03369096E-09,0.707106709,-7.03346359E-09
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 960
+	modMass = 0.225000009
+	modSize = 0,0,0
+	sym = pointyNoseConeB_4294362796
+	sym = pointyNoseConeB_4294362648
+	sym = pointyNoseConeB_4294362600
+	attN = bottom01,II-deuteriumx8_4294376978_0|-0.625|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1280
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294203238
+	partName = Part
+	persistentId = 1327221235
+	pos = 4.76837158E-07,25.1925373,2.24999285
+	attPos = 0,0,0
+	attPos0 = 1.49205698E-05,7.86999893,-1.25363381E-12
+	rot = -1.43746251E-20,0.707106829,-1.43746251E-20,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = -8.03887393E-14,-8.42937027E-08,-1.88707281E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294203294
+	sym = II-deuteriumx8_4294201680
+	sym = II-deuteriumx8_4294201556
+	sym = II-deuteriumx8_4294201432
+	attN = top,II-deuteriumx8_4294203294_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294388294_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294203294
+	partName = Part
+	persistentId = 1886103264
+	pos = 4.76837158E-07,33.0625381,2.25000739
+	attPos = 0,0,0
+	attPos0 = -4.18819141,39.7912407,2.43884945
+	rot = 1.34139566E-06,0.707106829,1.34139566E-06,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = adapterSmallMiniTall_4293925806
+	sym = II-deuteriumx8_4294201618
+	sym = II-deuteriumx8_4294201494
+	sym = II-deuteriumx8_4294201370
+	attN = top,adapterSmallMiniTall_4293925806_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294203238_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201680
+	partName = Part
+	persistentId = 2837279845
+	pos = 2.44999266,25.1925373,-0.20000048
+	attPos = 0,0,0
+	attPos0 = 1.49205725E-05,7.86999893,1.81898984E-12
+	rot = -1.92867044E-13,1.00000012,-1.92867044E-13,0
+	attRot = 0,0,0,1
+	attRot0 = -5.68434189E-14,-8.94069672E-08,-1.88707293E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294201618
+	sym = II-deuteriumx8_4294203238
+	sym = II-deuteriumx8_4294201556
+	sym = II-deuteriumx8_4294201432
+	attN = top,II-deuteriumx8_4294201618_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294377276_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201618
+	partName = Part
+	persistentId = 2300307030
+	pos = 2.4500072,33.0625381,-0.20000048
+	attPos = 0,0,0
+	attPos0 = -4.18819141,39.7912407,2.43884945
+	rot = 1.89702018E-06,1.00000012,-1.70530257E-13,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = adapterSmallMiniTall_4293933872
+	sym = II-deuteriumx8_4294203294
+	sym = II-deuteriumx8_4294201494
+	sym = II-deuteriumx8_4294201370
+	attN = top,adapterSmallMiniTall_4293933872_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294201680_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201556
+	partName = Part
+	persistentId = 2616163127
+	pos = -7.15255794E-07,25.1925373,-2.64999294
+	attPos = 0,0,0
+	attPos0 = 1.49205698E-05,7.86999893,-2.54591357E-12
+	rot = -2.87492535E-20,0.707106769,-2.87492535E-20,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = -8.03887393E-14,-8.42937027E-08,-1.88707281E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294201494
+	sym = II-deuteriumx8_4294203238
+	sym = II-deuteriumx8_4294201680
+	sym = II-deuteriumx8_4294201432
+	attN = top,II-deuteriumx8_4294201494_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294377158_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201494
+	partName = Part
+	persistentId = 2349014133
+	pos = -7.15255794E-07,33.0625381,-2.65000749
+	attPos = 0,0,0
+	attPos0 = -4.18819141,39.7912407,2.43884945
+	rot = 1.34139555E-06,0.707106769,-1.34139577E-06,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = adapterSmallMiniTall_4293925726
+	sym = II-deuteriumx8_4294203294
+	sym = II-deuteriumx8_4294201618
+	sym = II-deuteriumx8_4294201370
+	attN = top,adapterSmallMiniTall_4293925726_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294201556_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201432
+	partName = Part
+	persistentId = 917524766
+	pos = -2.44999266,25.1925373,-0.199999288
+	attPos = 0,0,0
+	attPos0 = 1.49205725E-05,7.86999893,9.09494919E-13
+	rot = -1.92867044E-13,0,1.28687913E-13,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = -5.68434189E-14,-8.94069672E-08,-1.88707293E-06,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = II-deuteriumx8_4294201370
+	sym = II-deuteriumx8_4294203238
+	sym = II-deuteriumx8_4294201680
+	sym = II-deuteriumx8_4294201556
+	attN = top,II-deuteriumx8_4294201370_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294377040_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-deuteriumx8_4294201370
+	partName = Part
+	persistentId = 1253357524
+	pos = -2.4500072,33.0625381,-0.199999288
+	attPos = 0,0,0
+	attPos0 = -4.18819141,39.7912407,2.43884945
+	rot = -1.13686838E-13,0,-1.89702007E-06,-1.00000012
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 1
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 56000
+	modMass = 5.5999999
+	modSize = 0,0,0
+	link = adapterSmallMiniTall_4293925646
+	sym = II-deuteriumx8_4294203294
+	sym = II-deuteriumx8_4294201618
+	sym = II-deuteriumx8_4294201494
+	attN = top,adapterSmallMiniTall_4293925646_0|1.9675|0
+	attN = bottom,II-deuteriumx8_4294201432_0|-1.9675|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 63991.0391
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 32000
+		maxAmount = 32000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialDecoupler_4294087910
+	partName = Part
+	persistentId = 3610307806
+	pos = 0.841325343,6.95277786,0.641325355
+	attPos = 0,0,0
+	attPos0 = -0.841324687,-2.76498795,0.841324508
+	rot = -4.7745566E-06,0.923879623,-1.97768577E-06,0.382683486
+	attRot = 0,0,0,1
+	attRot0 = -1.97768577E-06,0.382683456,-4.77455569E-06,0.923879623
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 4
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-CL-20Booster2_4294074716
+	sym = radialDecoupler_4294087286
+	sym = radialDecoupler_4294087224
+	sym = radialDecoupler_4294087162
+	srfN = srfAttach,II-deuteriumx8_4294695402
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294087286
+	partName = Part
+	persistentId = 2594368674
+	pos = 0.841325283,6.95277786,-1.04132533
+	attPos = 0,0,0
+	attPos0 = 0.841324389,-2.76498795,0.841324687
+	rot = -4.77455615E-06,0.923879623,1.97768622E-06,-0.382683486
+	attRot = 0,0,0,1
+	attRot0 = -4.77455569E-06,0.923879564,-1.97768554E-06,0.382683456
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 4
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-CL-20Booster2_4294072290
+	sym = radialDecoupler_4294087910
+	sym = radialDecoupler_4294087224
+	sym = radialDecoupler_4294087162
+	srfN = srfAttach,II-deuteriumx8_4294695402
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294087224
+	partName = Part
+	persistentId = 2431637422
+	pos = -0.841325521,6.95277786,-1.04132533
+	attPos = 0,0,0
+	attPos0 = 0.841324627,-2.76498795,-0.841324627
+	rot = -1.97768577E-06,0.382683486,4.7745566E-06,-0.923879623
+	attRot = 0,0,0,1
+	attRot0 = -4.77455569E-06,0.923879564,1.977686E-06,-0.382683456
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 4
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-CL-20Booster2_4294072244
+	sym = radialDecoupler_4294087910
+	sym = radialDecoupler_4294087286
+	sym = radialDecoupler_4294087162
+	srfN = srfAttach,II-deuteriumx8_4294695402
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4294087162
+	partName = Part
+	persistentId = 3368396353
+	pos = -0.841325223,6.95277786,0.641325355
+	attPos = 0,0,0
+	attPos0 = -0.841324508,-2.76498795,-0.841324627
+	rot = 1.97768622E-06,-0.382683486,4.77455615E-06,-0.923879623
+	attRot = 0,0,0,1
+	attRot0 = -1.97768554E-06,0.382683456,4.77455569E-06,-0.923879564
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 4
+	resPri = 0
+	dstg = 5
+	sidx = 0
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-CL-20Booster2_4294072198
+	sym = radialDecoupler_4294087910
+	sym = radialDecoupler_4294087286
+	sym = radialDecoupler_4294087224
+	srfN = srfAttach,II-deuteriumx8_4294695402
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 100
+		defaultScale = 100
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 600
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-CL-20Booster2_4294074716
+	partName = Part
+	persistentId = 4222475185
+	pos = 1.40450585,6.89024353,1.20450592
+	attPos = 0,0,0
+	attPos0 = -0.796456695,-0.0625425577,-1.19209275E-07
+	rot = -4.72204147E-06,0.382683396,1.95593475E-06,0.923879743
+	attRot = 0,0,0,1
+	attRot0 = 4.019466E-08,-0.707106888,4.0194319E-08,0.707106769
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = 1
+	sqor = 5
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4294055372
+	sym = II-CL-20Booster2_4294072290
+	sym = II-CL-20Booster2_4294072244
+	sym = II-CL-20Booster2_4294072198
+	srfN = srfAttach,radialDecoupler_4294087910
+	attN = top,noseCone_4294055372_0|3.939497|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 75
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = CL-20
+		amount = 850
+		maxAmount = 850
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-CL-20Booster2_4294072290
+	partName = Part
+	persistentId = 3262399127
+	pos = 1.40450728,6.89024353,-1.60450721
+	attPos = 0,0,0
+	attPos0 = -0.796456933,-0.0625425577,-1.78813934E-07
+	rot = -1.95593225E-06,0.923879743,4.7220401E-06,0.382683396
+	attRot = 0,0,0,1
+	attRot0 = 4.01951148E-08,-0.707106829,4.01945464E-08,0.707106769
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = 1
+	sqor = 5
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4294054892
+	sym = II-CL-20Booster2_4294074716
+	sym = II-CL-20Booster2_4294072244
+	sym = II-CL-20Booster2_4294072198
+	srfN = srfAttach,radialDecoupler_4294087286
+	attN = top,noseCone_4294054892_0|3.939497|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 75
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = CL-20
+		amount = 850
+		maxAmount = 850
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-CL-20Booster2_4294072244
+	partName = Part
+	persistentId = 3461116721
+	pos = -1.40450728,6.89024353,-1.60450745
+	attPos = 0,0,0
+	attPos0 = -0.796456993,-0.0625425577,-5.96046448E-08
+	rot = 1.95593293E-06,0.923879743,4.72203919E-06,-0.382683396
+	attRot = 0,0,0,1
+	attRot0 = 4.01947737E-08,-0.707106829,4.019466E-08,0.707106769
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = 1
+	sqor = 5
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4294054852
+	sym = II-CL-20Booster2_4294074716
+	sym = II-CL-20Booster2_4294072290
+	sym = II-CL-20Booster2_4294072198
+	srfN = srfAttach,radialDecoupler_4294087224
+	attN = top,noseCone_4294054852_0|3.939497|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 75
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = CL-20
+		amount = 850
+		maxAmount = 850
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = II-CL-20Booster2_4294072198
+	partName = Part
+	persistentId = 3377550950
+	pos = -1.40450585,6.89024353,1.20450544
+	attPos = 0,0,0
+	attPos0 = -0.796456695,-0.0625425577,-1.1920929E-07
+	rot = 4.72203965E-06,0.382683396,1.95593248E-06,-0.923879743
+	attRot = 0,0,0,1
+	attRot0 = 4.01947737E-08,-0.707106829,4.01945464E-08,0.707106769
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = 1
+	sqor = 5
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4294054812
+	sym = II-CL-20Booster2_4294074716
+	sym = II-CL-20Booster2_4294072290
+	sym = II-CL-20Booster2_4294072244
+	srfN = srfAttach,radialDecoupler_4294087162
+	attN = top,noseCone_4294054812_0|3.939497|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 75
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = CL-20
+		amount = 850
+		maxAmount = 850
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseCone_4294055372
+	partName = Part
+	persistentId = 2473105104
+	pos = 1.4044776,10.8297405,1.20447767
+	attPos = 0,0,0
+	attPos0 = -1.70406115E-12,3.93949699,1.48176156E-07
+	rot = 4.82332436E-13,0.707106888,1.60777479E-13,0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 4.72203919E-06,0.382683516,1.95593248E-06,0.923879504
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-aluminumStrut_4293916680
+	sym = noseCone_4294054892
+	sym = noseCone_4294054852
+	sym = noseCone_4294054812
+	attN = bottom01,II-CL-20Booster2_4294074716_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 240
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = noseCone_4294054892
+	partName = Part
+	persistentId = 705251519
+	pos = 1.40447903,10.8297405,-1.60447884
+	attPos = 0,0,0
+	attPos0 = -5.96077641E-08,3.93949699,1.48172319E-07
+	rot = 1.60777479E-13,1.00000024,1.60777479E-13,1.78813934E-07
+	attRot = 0,0,0,1
+	attRot0 = 4.72203828E-06,0.382683545,1.95593293E-06,0.923879564
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-aluminumStrut_4293916214
+	sym = noseCone_4294055372
+	sym = noseCone_4294054852
+	sym = noseCone_4294054812
+	attN = bottom01,II-CL-20Booster2_4294072290_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 240
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = noseCone_4294054852
+	partName = Part
+	persistentId = 3757838447
+	pos = -1.40447927,10.8297405,-1.60447896
+	attPos = 0,0,0
+	attPos0 = 5.96039911E-08,3.93949699,2.07778029E-07
+	rot = 1.60777479E-13,0.707106888,-4.82332436E-13,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 4.72203874E-06,0.382683545,1.95593248E-06,0.923879564
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-aluminumStrut_4293916148
+	sym = noseCone_4294055372
+	sym = noseCone_4294054892
+	sym = noseCone_4294054812
+	attN = bottom01,II-CL-20Booster2_4294072244_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 240
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = noseCone_4294054812
+	partName = Part
+	persistentId = 3980890101
+	pos = -1.40447736,10.8297405,1.20447719
+	attPos = 0,0,0
+	attPos0 = -1.23077926E-12,3.93949699,2.89649211E-08
+	rot = -1.48719166E-12,1.78813934E-07,-2.45185664E-12,-1.00000024
+	attRot = 0,0,0,1
+	attRot0 = 4.72203828E-06,0.382683545,1.95593225E-06,0.923879564
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = II-aluminumStrut_4293916082
+	sym = noseCone_4294055372
+	sym = noseCone_4294054892
+	sym = noseCone_4294054852
+	attN = bottom01,II-CL-20Booster2_4294072198_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 1.25
+		defaultScale = 1.25
+		defaultTransformScale = (0, 0, 0)
+		DryCost = 240
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = adapterSmallMiniTall_4293933872
+	partName = Part
+	persistentId = 1429889660
+	pos = 2.45002222,37.7475357,-0.20000048
+	attPos = 0,0,0
+	attPos0 = 2.7547012E-06,4.68499756,5.50534531E-12
+	rot = 0,0.707106888,0,0.707106888
+	attRot = 0,0,0,1
+	attRot0 = -1.34139566E-06,-0.707106829,-1.34139555E-06,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 1050
+	modMass = 0.349999994
+	modSize = 0,0,0
+	link = II-hydrogenIntake_4293926894
+	link = II-aluminumStrut_4293914846
+	sym = adapterSmallMiniTall_4293925806
+	sym = adapterSmallMiniTall_4293925726
+	sym = adapterSmallMiniTall_4293925646
+	attN = top,II-hydrogenIntake_4293926894_0|0.3125|0
+	attN = bottom,II-deuteriumx8_4294201618_0|-0.375|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1200
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-hydrogenIntake_4293926894
+	partName = Part
+	persistentId = 1534943743
+	pos = 2.45002222,38.3725357,-0.20000048
+	attPos = 0,0,0
+	attPos0 = 6.76778945E-12,0.625,2.2737373E-13
+	rot = 0,0.707106888,0,0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-hydrogenIntake_4293925766
+	sym = II-hydrogenIntake_4293925686
+	sym = II-hydrogenIntake_4293925606
+	attN = bottom01,adapterSmallMiniTall_4293933872_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleIIHydrogenIntake
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionToggleCollector
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOn
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOff
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = adapterSmallMiniTall_4293925806
+	partName = Part
+	persistentId = 3606295393
+	pos = 4.76837158E-07,37.7475357,2.25002241
+	attPos = 0,0,0
+	attPos0 = 2.75469574E-06,4.68499756,-7.53241978E-13
+	rot = -1.60777492E-13,0,-9.75279156E-15,1.00000012
+	attRot = 0,0,0,1
+	attRot0 = -1.34139577E-06,-0.707106829,-1.34139555E-06,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 1050
+	modMass = 0.349999994
+	modSize = 0,0,0
+	link = II-hydrogenIntake_4293925766
+	link = II-aluminumStrut_4293913974
+	sym = adapterSmallMiniTall_4293933872
+	sym = adapterSmallMiniTall_4293925726
+	sym = adapterSmallMiniTall_4293925646
+	attN = top,II-hydrogenIntake_4293925766_0|0.3125|0
+	attN = bottom,II-deuteriumx8_4294203294_0|-0.375|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1200
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-hydrogenIntake_4293925766
+	partName = Part
+	persistentId = 3308686092
+	pos = 4.76836988E-07,38.3725357,2.25002241
+	attPos = 0,0,0
+	attPos0 = 6.76778945E-12,0.625,2.2737373E-13
+	rot = -1.60777492E-13,0,-9.75279156E-15,1.00000012
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-hydrogenIntake_4293926894
+	sym = II-hydrogenIntake_4293925686
+	sym = II-hydrogenIntake_4293925606
+	attN = bottom01,adapterSmallMiniTall_4293925806_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleIIHydrogenIntake
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionToggleCollector
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOn
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOff
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = adapterSmallMiniTall_4293925726
+	partName = Part
+	persistentId = 3021630238
+	pos = -7.15255794E-07,37.7475357,-2.65002251
+	attPos = 0,0,0
+	attPos0 = 2.75469574E-06,4.68499756,-2.06636596E-12
+	rot = 8.03887393E-14,1.00000012,-8.03887393E-14,-1.1920929E-07
+	attRot = 0,0,0,1
+	attRot0 = -1.34139566E-06,-0.707106829,-1.34139555E-06,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 1050
+	modMass = 0.349999994
+	modSize = 0,0,0
+	link = II-hydrogenIntake_4293925686
+	link = II-aluminumStrut_4293913908
+	sym = adapterSmallMiniTall_4293933872
+	sym = adapterSmallMiniTall_4293925806
+	sym = adapterSmallMiniTall_4293925646
+	attN = top,II-hydrogenIntake_4293925686_0|0.3125|0
+	attN = bottom,II-deuteriumx8_4294201494_0|-0.375|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1200
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-hydrogenIntake_4293925686
+	partName = Part
+	persistentId = 3654119637
+	pos = -7.15255624E-07,38.3725357,-2.65002251
+	attPos = 0,0,0
+	attPos0 = 6.76778945E-12,0.625,2.2737373E-13
+	rot = 8.03887393E-14,1.00000012,-8.03887393E-14,-1.1920929E-07
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-hydrogenIntake_4293926894
+	sym = II-hydrogenIntake_4293925766
+	sym = II-hydrogenIntake_4293925606
+	attN = bottom01,adapterSmallMiniTall_4293925726_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleIIHydrogenIntake
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionToggleCollector
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOn
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOff
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = adapterSmallMiniTall_4293925646
+	partName = Part
+	persistentId = 2193170716
+	pos = -2.45002222,37.7475357,-0.199999288
+	attPos = 0,0,0
+	attPos0 = 2.7547012E-06,4.68499756,-1.77061154E-12
+	rot = 0,0.707106888,-8.03887393E-14,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = -1.34139566E-06,-0.707106829,-1.34139555E-06,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 1050
+	modMass = 0.349999994
+	modSize = 0,0,0
+	link = II-hydrogenIntake_4293925606
+	link = II-aluminumStrut_4293913842
+	sym = adapterSmallMiniTall_4293933872
+	sym = adapterSmallMiniTall_4293925806
+	sym = adapterSmallMiniTall_4293925726
+	attN = top,II-hydrogenIntake_4293925606_0|0.3125|0
+	attN = bottom,II-deuteriumx8_4294201370_0|-0.375|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1, 1, 1)
+		DryCost = 1200
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-hydrogenIntake_4293925606
+	partName = Part
+	persistentId = 3303390840
+	pos = -2.45002222,38.3725357,-0.199999288
+	attPos = 0,0,0
+	attPos0 = 6.76778945E-12,0.625,2.2737373E-13
+	rot = 0,0.707106888,-8.03887393E-14,-0.707106888
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-hydrogenIntake_4293926894
+	sym = II-hydrogenIntake_4293925766
+	sym = II-hydrogenIntake_4293925686
+	attN = bottom01,adapterSmallMiniTall_4293925646_0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleIIHydrogenIntake
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			actionToggleCollector
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOn
+			{
+				actionGroup = None
+			}
+			actionTurnCollectorOff
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-para_4293919308
+	partName = Part
+	persistentId = 4028241572
+	pos = 0,43.1133537,-0.200000003
+	attPos = 0,0,0
+	attPos0 = 0,1.29827118,0
+	rot = 0,0.707106829,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	sepI = -1
+	attm = 0
+	modCost = 3654
+	modMass = 1.39999998
+	modSize = 0,0,0
+	attN = bottom,II-largePod_4294710280_0|-0.01508113|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.00499999989
+		deployAltitude = 800
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TweakScale
+		isEnabled = True
+		currentScale = 2.5
+		defaultScale = 1.25
+		defaultTransformScale = (1.25, 1.25, 1.25)
+		DryCost = 4176
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293916680
+	partName = CompoundPart
+	persistentId = 1388330507
+	pos = 1.42813933,11.4615288,1.1808157
+	attPos = 0,0,0
+	attPos0 = 0.0236617532,0.631788254,0.0236616097
+	rot = -0.484254092,0.786798537,0.200584441,-0.325902402
+	attRot = 0,0,0,1
+	attRot0 = -0.484254122,0.78679812,-0.200584605,0.325902462
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293916214
+	sym = II-aluminumStrut_4293916148
+	sym = II-aluminumStrut_4293916082
+	srfN = srfAttach,noseCone_4294055372
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294695402
+		pos = -0.977588892,0.599930465,0.808766723
+		rot = -3.35235626E-08,0.707110465,3.3197864E-06,0.707103908
+		dir = -0.696556211,0.42746526,0.576266229
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293916214
+	partName = CompoundPart
+	persistentId = 4283999330
+	pos = 1.38081741,11.4615288,-1.62814081
+	attPos = 0,0,0
+	attPos0 = 0.0236615986,0.631788254,0.0236617886
+	rot = -0.20058471,0.32590282,0.484254062,-0.786798239
+	attRot = 0,0,0,1
+	attRot0 = -0.484254122,0.786798179,-0.20058462,0.325902432
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293916680
+	sym = II-aluminumStrut_4293916148
+	sym = II-aluminumStrut_4293916082
+	srfN = srfAttach,noseCone_4294054892
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294695402
+		pos = -0.977588534,0.599930167,0.808768988
+		rot = -1.70530079E-08,0.707110345,3.49487073E-06,0.707104027
+		dir = -0.696555555,0.427464813,0.57626754
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293916148
+	partName = CompoundPart
+	persistentId = 2330619740
+	pos = -1.42814088,11.4615288,-1.58081734
+	attPos = 0,0,0
+	attPos0 = 0.0236616787,0.631788254,0.0236618016
+	rot = 0.20058459,-0.325902611,0.484254181,-0.786798358
+	attRot = 0,0,0,1
+	attRot0 = -0.484254152,0.786798179,-0.200584635,0.325902492
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293916680
+	sym = II-aluminumStrut_4293916214
+	sym = II-aluminumStrut_4293916082
+	srfN = srfAttach,noseCone_4294054852
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294695402
+		pos = -0.977516711,0.59988606,0.808708251
+		rot = 8.86679707E-09,0.70710361,-2.64523624E-06,0.707110524
+		dir = -0.696555912,0.427464992,0.576266885
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293916082
+	partName = CompoundPart
+	persistentId = 271574022
+	pos = -1.38081551,11.4615288,1.22813892
+	attPos = 0,0,0
+	attPos0 = 0.0236617625,0.631788254,0.0236616973
+	rot = 0.484254122,-0.786798239,0.200584769,-0.325902581
+	attRot = 0,0,0,1
+	attRot0 = -0.484254122,0.786798179,-0.20058462,0.325902432
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 5
+	resPri = 0
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293916680
+	sym = II-aluminumStrut_4293916214
+	sym = II-aluminumStrut_4293916148
+	srfN = srfAttach,noseCone_4294054812
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294695402
+		pos = -0.97751528,0.599885166,0.808707297
+		rot = -1.77117627E-08,0.707103729,-3.4115119E-06,0.707110345
+		dir = -0.696555853,0.427464932,0.576267004
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293914846
+	partName = CompoundPart
+	persistentId = 434817424
+	pos = 1.60909033,37.9463959,-0.200000241
+	attPos = 0,0,0
+	attPos0 = -2.09996557E-07,0.198859066,-0.840929866
+	rot = 0,-8.94069672E-08,0.253064811,-0.967449665
+	attRot = 0,0,0,1
+	attRot0 = -0.178943798,0.684089959,0.178943798,-0.684090078
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293913974
+	sym = II-aluminumStrut_4293913908
+	sym = II-aluminumStrut_4293913842
+	srfN = srfAttach,adapterSmallMiniTall_4293933872
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294446854
+		pos = -1.12896574,1.18998194,0.0861940309
+		rot = -6.94356073E-10,2.65448485E-09,0.253063709,0.967449844
+		dir = -0.687314928,0.724461615,0.0524749681
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293913974
+	partName = CompoundPart
+	persistentId = 4052107963
+	pos = 3.5762784E-07,37.9463959,1.40909028
+	attPos = 0,0,0
+	attPos0 = -2.3841848E-07,0.198859066,-0.840930223
+	rot = -0.178943828,0.684090018,0.178943828,-0.684090137
+	attRot = 0,0,0,1
+	attRot0 = -0.178943813,0.684089959,0.178943813,-0.684090078
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293914846
+	sym = II-aluminumStrut_4293913908
+	sym = II-aluminumStrut_4293913842
+	srfN = srfAttach,adapterSmallMiniTall_4293925806
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294446854
+		pos = -1.12896657,1.18998575,0.0861966833
+		rot = -7.86336057E-14,5.11326048E-09,0.253064841,0.967449665
+		dir = -0.687313974,0.72446239,0.0524764732
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293913908
+	partName = CompoundPart
+	persistentId = 1017107420
+	pos = -5.74366709E-07,37.9463959,-1.80909085
+	attPos = 0,0,0
+	attPos0 = -2.39408024E-07,0.198859066,-0.840930223
+	rot = 0.178943902,-0.684090197,0.178943813,-0.684089959
+	attRot = 0,0,0,1
+	attRot0 = -0.178943798,0.684089959,0.178943828,-0.684090078
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293914846
+	sym = II-aluminumStrut_4293913974
+	sym = II-aluminumStrut_4293913842
+	srfN = srfAttach,adapterSmallMiniTall_4293925726
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294446854
+		pos = -1.12896943,1.18998897,0.0861919448
+		rot = 1.28274236E-09,-9.85019213E-08,0.253064841,0.967449665
+		dir = -0.687314034,0.724462569,0.0524734594
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = II-aluminumStrut_4293913842
+	partName = CompoundPart
+	persistentId = 932863355
+	pos = -1.60909009,37.9463959,-0.199999526
+	attPos = 0,0,0
+	attPos0 = -2.09974786E-07,0.198859066,-0.840930104
+	rot = 0.253064752,-0.967449665,2.98023224E-08,8.94069672E-08
+	attRot = 0,0,0,1
+	attRot0 = -0.178943798,0.684089959,0.178943798,-0.684090078
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 2
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = II-aluminumStrut_4293914846
+	sym = II-aluminumStrut_4293913974
+	sym = II-aluminumStrut_4293913908
+	srfN = srfAttach,adapterSmallMiniTall_4293925646
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294446854
+		pos = -1.12896979,1.1899929,0.086194627
+		rot = 2.42959053E-09,-4.0093223E-08,0.253065854,0.967449188
+		dir = -0.687312901,0.724463522,0.0524749905
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
