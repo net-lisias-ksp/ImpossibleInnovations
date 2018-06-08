@@ -61,7 +61,16 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Version.cs" />
   </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <PropertyGroup>
+    <PostBuildEvent>
+        cp "$(TargetPath)" "$(SolutionDir)..\..\..\..\runtime\1.4.1\GameData\net.lisias.ksp\$(SolutionName)\Plugins" ;
+        cp "$(TargetPath)" "$(SolutionDir)..\GameData\net.lisias.ksp\$(SolutionName)\Plugins"
+    </PostBuildEvent>
+  </PropertyGroup>
+
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
