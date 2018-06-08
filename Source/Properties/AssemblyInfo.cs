@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle (ImpossibleInnovations.Constants.PLUGIN_ID)]
-[assembly: AssemblyDescription ("Unofficial Build.")]
+[assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("net.lisias.ksp")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("jandcando")]
+[assembly: AssemblyCopyright ("lisias, jandcando")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
