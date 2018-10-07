@@ -6,6 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7850788C-07DE-4D40-A817-DAAD1FB14471}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <BaseIntermediateOutputPath>..\..\obj</BaseIntermediateOutputPath>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ImpossibleInnovations</RootNamespace>
     <AssemblyName>ImpossibleInnovations</AssemblyName>
@@ -17,7 +18,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>./bin</OutputPath>
+    <OutputPath>..\..\bin\Debug</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,16 +39,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\LIB\managed\1.4.1\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -66,8 +67,6 @@
 
   <PropertyGroup>
     <PostBuildEvent>
-        cp "$(TargetPath)" "$(SolutionDir)..\..\..\..\runtime\1.4.1\GameData\net.lisias.ksp\$(SolutionName)\Plugins" ;
-        cp "$(TargetPath)" "$(SolutionDir)..\GameData\net.lisias.ksp\$(SolutionName)\Plugins"
     </PostBuildEvent>
   </PropertyGroup>
 
