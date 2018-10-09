@@ -77,6 +77,8 @@ namespace ImpossibleInnovations
 
         public void FixedUpdate()
         {
+			if (!HighLogic.LoadedSceneIsFlight) return;
+
             if (part.Modules.Contains("ModuleLiftingSurface"))
             {               
                 if (vessel.srfSpeed < 30 && wingActive) //if vessel speed is below 30 m/s, give full lift at no cost

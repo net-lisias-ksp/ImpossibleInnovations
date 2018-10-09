@@ -56,9 +56,12 @@ namespace ImpossibleInnovations
 
         public void FixedUpdate()
         {
-            if (intakeActive == "Active")
+			if (!HighLogic.LoadedSceneIsFlight) return;
+			if (intakeActive != "Active") return;
+			
             {
-                part.RequestResource("Hydrogen", ((this.part.vessel.atmDensity * -0.20f) - 0.0025f) * TimeWarp.fixedDeltaTime);
+				double ammount = ((this.part.vessel.atmDensity * -0.20) - 0.0025) * TimeWarp.fixedDeltaTime;
+                part.RequestResource("Hydrogen", ammount);
             }
         }
     }
