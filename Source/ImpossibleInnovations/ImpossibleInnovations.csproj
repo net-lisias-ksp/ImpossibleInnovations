@@ -50,6 +50,9 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="KSPe">
+      <HintPath>..\..\..\..\..\LIB\plugins\KSPe.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="II_Icons.cs" />
@@ -58,7 +61,6 @@
     <Compile Include="ModuleIIIonWing.cs" />
     <Compile Include="ModuleIIHydrogenIntake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FileManager.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Properties\Version.cs">
       <DependentUpon>Version.tt</DependentUpon>

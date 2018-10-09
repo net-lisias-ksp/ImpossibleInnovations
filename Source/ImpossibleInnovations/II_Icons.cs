@@ -19,12 +19,24 @@ namespace ImpossibleInnovations
             Texture2D unselectedLegacy = new Texture2D(32, 32);
             Texture2D selectedLegacy = new Texture2D(32, 32);
 
-			unselected.LoadImage(File.ReadAllBytes(FileManager.FULLPATHNAME(FileManager.PLUGINDATA_PATHNAME, "SmallLogo.png")));
-			selected.LoadImage(File.ReadAllBytes(FileManager.FULLPATHNAME(FileManager.PLUGINDATA_PATHNAME, "SmallLogoON.png")));
+			{
+				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogo.png");
+				unselected.LoadImage(File.ReadAllBytes(fn));
+			}
+			{
+				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoON.png");
+				selected.LoadImage(File.ReadAllBytes(fn));
+			}
             RUI.Icons.Selectable.Icon filterIcon = new RUI.Icons.Selectable.Icon("II_filter_icon", unselected, selected); //Defining filterIcon
 
-			unselectedLegacy.LoadImage(File.ReadAllBytes(FileManager.FULLPATHNAME(FileManager.PLUGINDATA_PATHNAME, "SmallLogoGrey.png")));
-			selectedLegacy.LoadImage(File.ReadAllBytes(FileManager.FULLPATHNAME(FileManager.PLUGINDATA_PATHNAME, "SmallLogoGreyON.png")));
+			{
+				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGrey.png");
+				unselectedLegacy.LoadImage(File.ReadAllBytes(fn));
+			}
+			{
+				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGreyON.png");
+				selectedLegacy.LoadImage(File.ReadAllBytes(fn));
+			}
             RUI.Icons.Selectable.Icon filterIconLegacy = new RUI.Icons.Selectable.Icon("II_filter_icon_legacy", unselectedLegacy, selectedLegacy); //Defining filterIconLegacy
 
             PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter(Constants.PLUGIN_ID, Constants.MANUFACTURER_NAME, filterIcon, Color.white);
