@@ -4,59 +4,60 @@ namespace ImpossibleInnovations
 {
     public class ModuleIIPoof : PartModule
     {
-        [KSPField(guiActive = true, guiActiveEditor = false, guiName = "Saftey", isPersistant = true)]
-        public string poofSaftey = "On";
+		[KSPField(guiActive = true, guiActiveEditor = false, guiName = "Safety", isPersistant = true)]
+		private bool _poofSafety = true;
+        public string poofSafety
+		{
+			get => this._poofSafety ? "On" : "Off";
+			set => this._poofSafety = "On" == value;
+		}
 
-        #region Functions
-        public void poofSafteyOn()
+		#region Functions
+		public void poofSafetyOn()
         {
-            poofSaftey = "On";
-            Events["toggleSaftey"].guiName = "Turn Saftey Off";
+			this._poofSafety = true;
+            Events["toggleSafety"].guiName = "Turn Safety Off";
         }
 
-        public void poofSafteyOff()
+        public void poofSafetyOff()
         {
-            poofSaftey = "Off";
-            Events["toggleSaftey"].guiName = "Turn Saftey On";
+			this._poofSafety = false;
+            Events["toggleSafety"].guiName = "Turn Safety On";
         }
 
-        [KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Turn Saftey Off")]
-        public void toggleSaftey()
+        [KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Turn Safety Off")]
+        public void toggleSafety()
         {
-            if (poofSaftey == "On")
-            {
-                poofSafteyOff();
-            }
-            else
-            {
-                poofSafteyOn();
-            }
-        }
+            if (this._poofSafety)   poofSafetyOff();
+			else                    poofSafetyOn();
+		}
 
-        [KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Poof!")]
+		[KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Poof!")]
         public void poof()
         {
-            if (poofSaftey == "Off") this.part.explode();
+			if (this._poofSafety) return;
+			
+            this.part.explode();
         }
         #endregion
 
         #region Action Groups
-        [KSPAction("Toggle Saftey")]
+        [KSPAction("Toggle Safety")]
         public void actionToggleSaftey(KSPActionParam param)
         {
-            toggleSaftey();
+            toggleSafety();
         }
 
-        [KSPAction("Saftey On")]
+        [KSPAction("Safety On")]
         public void actionSafteyOn(KSPActionParam param)
         {
-            poofSafteyOn();
+            poofSafetyOn();
         }
 
-        [KSPAction("Saftey Off")]
+        [KSPAction("Safety Off")]
         public void actionSafteyOff(KSPActionParam param)
         {
-            poofSafteyOff();
+            poofSafetyOff();
         }
 
         [KSPAction("Poof!")]
