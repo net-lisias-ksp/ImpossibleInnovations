@@ -1,6 +1,6 @@
 # Impossible Innovations
 
-![](./PR_material/banner.jpg)
+![](./PR_material/ImpossibleInnovations_banner.jpg)
 
 This mod adds some late-game engines and tanks to the game. These parts are fusion-based or use advanced technologies.
 
