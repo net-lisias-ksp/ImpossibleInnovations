@@ -55,9 +55,15 @@ To install, place the GameData folder inside your Kerbal Space Program folder.
 
 ### Dependencies
 
-<!-- * [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) -->
-
-None at he moment. :)
+* [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.0 or later
+	+ Included
+		- (do not overwrite if you download a new version from the Official Distribution Site)
+* Module Manager 3.0.7 or later
+	+ Included
+		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
+* TweakScale 2.3 or later
+	+ Included
+		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
 
 
 ## UPSTREAM
