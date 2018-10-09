@@ -61,7 +61,7 @@ namespace ImpossibleInnovations
 			
             {
 				double ammount = ((this.part.vessel.atmDensity * -0.20) - 0.0025) * TimeWarp.fixedDeltaTime;
-                part.RequestResource("Hydrogen", ammount);
+                part.RequestResource("HydrogenProtium", ammount);
             }
         }
     }
