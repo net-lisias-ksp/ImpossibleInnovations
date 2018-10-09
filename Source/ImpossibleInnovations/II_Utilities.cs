@@ -11,14 +11,14 @@ namespace ImpossibleInnovations
         //I borrowed this code from Karbonite, and made some changes
         public static double GetShipResourceAmount(Vessel vessel, string resName)
         {
-            var amount = 0;
+			int amount = 0;
             if (vessel != null)
             {
-                foreach (var p in vessel.parts)
+                foreach (Part p in vessel.parts)
                 {
                     if (p.Resources.Contains(resName))
                     {
-                        var res = p.Resources[resName];
+						PartResource res = p.Resources[resName];
                         amount += (int)res.amount;
                     }
                 }
@@ -29,14 +29,14 @@ namespace ImpossibleInnovations
         //I borrowed this code from Karbonite, and made some changes
         public static double GetShipResourceMaxAmount(Vessel vessel, string resName)
         {
-            var maxAmount = 0;
+			int maxAmount = 0;
             if (vessel != null)
             {
-                foreach (var p in vessel.parts)
+                foreach (Part p in vessel.parts)
                 {
                     if (p.Resources.Contains(resName))
                     {
-                        var res = p.Resources[resName];
+						PartResource res = p.Resources[resName];
                         maxAmount += (int)res.maxAmount;
                     }
                 }
