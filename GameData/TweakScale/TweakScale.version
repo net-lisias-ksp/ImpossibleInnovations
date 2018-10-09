@@ -5,7 +5,7 @@
      "GITHUB":{
          "USERNAME":"Pellinor",
          "REPOSITORY":"TweakScale",
-         "ALLOW_PRE_RELEASE":false,
+         "ALLOW_PRE_RELEASE":false
      },
      "VERSION":{
          "MAJOR":2,
