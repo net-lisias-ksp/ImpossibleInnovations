@@ -4,26 +4,34 @@ namespace ImpossibleInnovations
 {
     public class ModuleIIHydrogenIntake : PartModule
     {
-        [KSPField(guiActive = true, guiActiveEditor = false, guiName = "State", isPersistant = false)]
-        public string intakeActive = "Active";
+        [KSPField(guiActive = true, guiActiveEditor = false, guiName = "Active", isPersistant = true)]
+        public bool intakeActive = true;
 
-        #region Functions
-        public void filterOn()
+		[KSPField(guiActive = true, guiActiveEditor = false, guiName = "State", isPersistant = false)]
+		public string intakeStatus = "Active";
+
+		[KSPField(guiActive = true, guiActiveEditor = false, guiName = "Scoop", isPersistant = false)]
+		public double ammount = 0;
+
+		#region Functions
+		public void filterOn()
         {
-            intakeActive = "Active";
+			this.intakeActive = true;
+			this.intakeStatus = "Active";
             Events["toggleFilter"].guiName = "Turn Collector Off";
         }
 
         public void filterOff()
         {
-            intakeActive = "Inactive";
+			this.intakeActive = false;
+			this.intakeStatus = "Inactive";
             Events["toggleFilter"].guiName = "Turn Collector On";
         }
 
         [KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Turn Collector Off")]
         public void toggleFilter()
         {
-            if (intakeActive == "Active")
+            if (this.intakeActive)
             {
                 filterOff();
             }
@@ -57,10 +65,12 @@ namespace ImpossibleInnovations
         public void FixedUpdate()
         {
 			if (!HighLogic.LoadedSceneIsFlight) return;
-			if (intakeActive != "Active") return;
+			if (!this.intakeActive) return;
 			
             {
-				double ammount = ((this.part.vessel.atmDensity * -0.20) - 0.0025) * TimeWarp.fixedDeltaTime;
+				this.ammount = ((this.part.vessel.atmDensity * -0.20) - 0.0025) * TimeWarp.fixedDeltaTime;
+				if (this.ammount < .000001) this.intakeStatus = "Iddle";
+				else this.intakeStatus = "Scooping";
                 part.RequestResource("HydrogenProtium", ammount);
             }
         }

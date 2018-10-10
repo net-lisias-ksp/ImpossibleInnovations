@@ -4,38 +4,38 @@ namespace ImpossibleInnovations
 {
     public class ModuleIIPoof : PartModule
     {
-		[KSPField(guiActive = true, guiActiveEditor = false, guiName = "Safety", isPersistant = true)]
-		private bool _poofSafety = true;
-        public string poofSafety
-		{
-			get => this._poofSafety ? "On" : "Off";
-			set => this._poofSafety = "On" == value;
-		}
+        [KSPField(guiActive = true, guiActiveEditor = false, guiName = "Active", isPersistant = true)]
+        public bool poofSafety = true;
+
+		[KSPField(guiActive = true, guiActiveEditor = false, guiName = "Safety", isPersistant = false)]
+		public string poofStatus;
 
 		#region Functions
 		public void poofSafetyOn()
         {
-			this._poofSafety = true;
+			this.poofSafety = true;
+			this.poofStatus = "On";
             Events["toggleSafety"].guiName = "Turn Safety Off";
         }
 
         public void poofSafetyOff()
         {
-			this._poofSafety = false;
+			this.poofSafety = false;
+			this.poofStatus = "OFF";
             Events["toggleSafety"].guiName = "Turn Safety On";
         }
 
         [KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Turn Safety Off")]
         public void toggleSafety()
         {
-            if (this._poofSafety)   poofSafetyOff();
+            if (this.poofSafety)   poofSafetyOff();
 			else                    poofSafetyOn();
 		}
 
 		[KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Poof!")]
         public void poof()
         {
-			if (this._poofSafety) return;
+			if (this.poofSafety) return;
 			
             this.part.explode();
         }
