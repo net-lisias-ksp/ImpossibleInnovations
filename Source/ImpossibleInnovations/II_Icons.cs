@@ -43,7 +43,9 @@ namespace ImpossibleInnovations
 
             //filters for all II parts
 			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "AllParts", string.Format("All {0} Parts", Constants.MANUFACTURER_NAME), filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && !o.title.Contains("(LEGACY)"));
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "Deuterium" || q.resourceName == "Tritium") && p.manufacturer == Constants.MANUFACTURER_NAME);
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "CommandPods", "Command Pods", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Pods" && !o.title.Contains("(LEGACY)"));
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Control", "Control", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString().Contains("Control") && !o.title.Contains("(LEGACY)"));
+			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "HydrogenProtium" || q.resourceName == "HydrogenDeuterium" || q.resourceName == "HydrogenTritium") && p.manufacturer == Constants.MANUFACTURER_NAME);
 			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", "Engines", filterIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == Constants.MANUFACTURER_NAME);
 			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "BoostersCL20", "CL-20 Boosters", filterIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == Constants.MANUFACTURER_NAME);
 			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "WingsIonized", "Ionized Wings", filterIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == Constants.MANUFACTURER_NAME);
