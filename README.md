@@ -14,6 +14,7 @@ Now under New Management by Lisias. :)
 * [Binaries](https://github.com/net-lisias-ksp/ImpossibleInnovations/tree/Archive)
 * Documentation	
 	+ [Homepage](http://ksp.lisias.net/add-ons/ImpossibleInnovations) on L Aerospace KSP Division
+	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/175694-141-impossible-innovations-under-new-management/)
 	+ [Project's README](https://github.com/net-lisias-ksp/ImpossibleInnovations/blob/master/README.md)
 	+ [Change Log](./CHANGE_LOG.md)
 	+ [TODO](./TODO.md) list
@@ -60,6 +61,6 @@ None at he moment. :)
 
 ## UPSTREAM
 
-* [swamp_ig](https://forum.kerbalspaceprogram.com/index.php?/profile/85299-pellinor/): ROOT
-	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/73648-104-kspapiextensions-v175-utilities-for-shared-mod-use-25-jun/)
-	+ [GitHub](https://github.com/Swamp-Ig/KSPAPIExtensions)
+* [jandcando](https://forum.kerbalspaceprogram.com/index.php?/profile/66121-jandcando/): ROOT
+	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/77933-12-impossible-innovations-0876/&tab=comments#comment-1262281)
+	+ [GitHub](https://github.com/JandCandO/ImpossibleInnovations)
