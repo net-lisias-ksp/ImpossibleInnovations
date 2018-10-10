@@ -20,3 +20,8 @@
 	+ For the Tritium Fuel Cell
 * Tech Tree
 	+ Correctly configure the techRequired tag on the parts! 
+
+## Known Issues
+
+* The HydrogenProtium, HydrogenDeuterium and HydrogenTritium (the new names for the resources used by the add-on) are being rendered all as just "Hy" on the Tweakables. I don't have the slightest clue why...
+	+ The Resources widget (top-right, above the stock toolbar) show them correctly. 
