@@ -4,11 +4,6 @@
 	"DOWNLOAD"	: "https://github.com/net-lisias-ksp/ImpossibleInnovations/releases",
 	"CHANGE_LOG"	: "https://raw.githubusercontent.com/net-lisias-ksp/ImpossibleInnovations/master/CHANGE_LOG.md",
 	"CHANGE_LOG_URL": "https://raw.githubusercontent.com/net-lisias-ksp/ImpossibleInnovations/master/CHAMGES.md",
-	"GITHUB": {
-		"USERNAME"		: "net.lisias.ksp",
-		"REPOSITORY"		: "ImpossibleInnovations",
-		"ALLOW_PRE_RELEASE"	: false
-		},
 	"VERSION":{
 		"MAJOR":0,
 		"MINOR":8,
