@@ -10,8 +10,9 @@ Now under New Management by Lisias. :)
 ## In a Hurry
 
 * [Latest Release](https://github.com/net-lisias-ksp/ImpossibleInnovations/releases)
-* [Source](https://github.com/net-lisias-ksp/ImpossibleInnovations)
 * [Binaries](https://github.com/net-lisias-ksp/ImpossibleInnovations/tree/Archive)
+* [Source](https://github.com/net-lisias-ksp/ImpossibleInnovations)
+* [Issue Tracker](https://github.com/net-lisias-ksp/ImpossibleInnovations/issues)
 * Documentation	
 	+ [Homepage](http://ksp.lisias.net/add-ons/ImpossibleInnovations) on L Aerospace KSP Division
 	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/175694-141-impossible-innovations-under-new-management/)
