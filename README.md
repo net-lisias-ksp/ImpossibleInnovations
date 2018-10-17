@@ -1,6 +1,6 @@
 # Impossible Innovations
 
-![](./PR_material/ImpossibleInnovations/banner.jpg)
+![](./PR_material/banner.jpg)
 
 This mod adds some late-game engines and tanks to the game. These parts are fusion-based or use advanced technologies.
 
@@ -32,14 +32,14 @@ This add in is useful for providing some functions that make interacting with th
 
 ### Sample Crafts
 
-* ![](./PR_material/ImpossibleInnovations/crafts/II-R.jpg)
+* ![](./PR_material/crafts/II-R.jpg)
 	+ Impossible Innovations/R
 	+ Pretty standard multistage rocket:
 		- Maximum Thrust / Engage SAS
 		- Hit Stage to engage Deuterium Engines
 		- Hit Stage to engage boosters and release clamps
 		- Incline her to 5° as soon as she lift off - to prevent the boosters to falling over KSC.
-* ![](./PR_material/ImpossibleInnovations/crafts/II-A_front.jpg)
+* ![](./PR_material/crafts/II-A_front.jpg)
 	+ Impossible Innovations/A
 	+ An Aeris 3A modified to use Ionized Wings and Deuterium rocket engine.
 		- Engage the Tritium Fuel Cells before taking off, or the wings will not work properly!  
