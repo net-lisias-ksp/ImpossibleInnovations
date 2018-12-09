@@ -65,6 +65,12 @@ To install, place the GameData folder inside your Kerbal Space Program folder.
 	+ Included
 		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
 
+### License
+
+Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License. See [here](./LICENSE).
+
+Please note the copyrights and trademarks in [NOTICE](./NOTICE).
+
 
 ## UPSTREAM
 
