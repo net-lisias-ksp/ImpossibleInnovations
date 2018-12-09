@@ -17,6 +17,7 @@ Now under New Management by Lisias. :)
 	+ [Homepage](http://ksp.lisias.net/add-ons/ImpossibleInnovations) on L Aerospace KSP Division
 	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/175694-141-impossible-innovations-under-new-management/)
 	+ [Project's README](https://github.com/net-lisias-ksp/ImpossibleInnovations/blob/master/README.md)
+	+ [Install Instructions](https://github.com/net-lisias-ksp/ImpossibleInnovations/blob/master/INSTALL.md)
 	+ [Change Log](./CHANGE_LOG.md)
 	+ [TODO](./TODO.md) list
 * Official Distribution Sites:
@@ -49,21 +50,7 @@ And more on [KerbalX](https://kerbalx.com/hangars/44338) (soon also on Steam Wor
 
 ## Installation
 
-To install, place the GameData folder inside your Kerbal Space Program folder.
-
-**REMOVE ANY OLD VERSIONS OF THE PRODUCT BEFORE INSTALLING**.
-
-### Dependencies
-
-* [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.0 or later
-	+ Included
-		- (do not overwrite if you download a new version from the Official Distribution Site)
-* Module Manager 3.0.7 or later
-	+ Included
-		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
-* TweakScale 2.3 or later
-	+ Included
-		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
+Detailed installation instructions are now on its own file (see the [In a Hurry](#in-a-hurry) section) and on the distribution file.
 
 ### License
 
