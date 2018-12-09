@@ -39,7 +39,7 @@ This add in is useful for providing some functions that make interacting with th
 		- Maximum Thrust / Engage SAS
 		- Hit Stage to engage Deuterium Engines
 		- Hit Stage to engage boosters and release clamps
-		- Incline her to 5° as soon as she lift off - to prevent the boosters to falling over KSC.
+		- Incline her to 5° as soon as she lift off - to prevent the boosters from falling over KSC.
 * ![](./PR_material/crafts/II-A_front.jpg)
 	+ Impossible Innovations/A
 	+ An Aeris 3A modified to use Ionized Wings and Deuterium rocket engine.
@@ -59,7 +59,7 @@ Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License. See [here](./
 Please note the copyrights and trademarks in [NOTICE](./NOTICE).
 
 
-## UPSTREAM
+## References
 
 * [jandcando](https://forum.kerbalspaceprogram.com/index.php?/profile/66121-jandcando/): ROOT
 	+ [Forum](https://forum.kerbalspaceprogram.com/index.php?/topic/77933-12-impossible-innovations-0876/&tab=comments#comment-1262281)
