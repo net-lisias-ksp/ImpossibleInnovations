@@ -37,39 +37,46 @@ namespace ImpossibleInnovations
             Texture2D unselectedLegacy = new Texture2D(32, 32);
             Texture2D selectedLegacy = new Texture2D(32, 32);
 
-			{
-				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogo.png");
-				unselected.LoadImage(File.ReadAllBytes(fn));
+			try
+			{ 
+				{
+					string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogo.png");
+					unselected.LoadImage(File.ReadAllBytes(fn));
+				}
+				{
+					string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoON.png");
+					selected.LoadImage(File.ReadAllBytes(fn));
+				}
+	            RUI.Icons.Selectable.Icon filterIcon = new RUI.Icons.Selectable.Icon("II_filter_icon", unselected, selected); //Defining filterIcon
+	
+				{
+					string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGrey.png");
+					unselectedLegacy.LoadImage(File.ReadAllBytes(fn));
+				}
+				{
+					string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGreyON.png");
+					selectedLegacy.LoadImage(File.ReadAllBytes(fn));
+				}
+	            RUI.Icons.Selectable.Icon filterIconLegacy = new RUI.Icons.Selectable.Icon("II_filter_icon_legacy", unselectedLegacy, selectedLegacy); //Defining filterIconLegacy
+	
+	            PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter(Constants.PLUGIN_ID, Constants.MANUFACTURER_NAME, filterIcon, Color.white);
+	
+	            //filters for all II parts
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "AllParts", string.Format("All {0} Parts", Constants.MANUFACTURER_NAME), filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && !o.title.Contains("(LEGACY)"));
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "CommandPods", "Command Pods", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Pods" && !o.title.Contains("(LEGACY)"));
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Control", "Control", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString().Contains("Control") && !o.title.Contains("(LEGACY)"));
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "HydrogenProtium" || q.resourceName == "HydrogenDeuterium" || q.resourceName == "HydrogenTritium") && p.manufacturer == Constants.MANUFACTURER_NAME);
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Electrical", "Electrical", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Electrical" && !o.title.Contains("(LEGACY)"));
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", "Engines", filterIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == Constants.MANUFACTURER_NAME);
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "BoostersCL20", "CL-20 Boosters", filterIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == Constants.MANUFACTURER_NAME);
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "WingsIonized", "Ionized Wings", filterIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == Constants.MANUFACTURER_NAME);
+				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Legacy", "Legacy Parts", filterIconLegacy, v => v.title.Contains("(LEGACY)") && v.manufacturer == Constants.MANUFACTURER_NAME);
 			}
+			catch (Exception e)
 			{
-				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoON.png");
-				selected.LoadImage(File.ReadAllBytes(fn));
+				Log.ex(this, e);
 			}
-            RUI.Icons.Selectable.Icon filterIcon = new RUI.Icons.Selectable.Icon("II_filter_icon", unselected, selected); //Defining filterIcon
-
-			{
-				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGrey.png");
-				unselectedLegacy.LoadImage(File.ReadAllBytes(fn));
-			}
-			{
-				string fn = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/SmallLogoGreyON.png");
-				selectedLegacy.LoadImage(File.ReadAllBytes(fn));
-			}
-            RUI.Icons.Selectable.Icon filterIconLegacy = new RUI.Icons.Selectable.Icon("II_filter_icon_legacy", unselectedLegacy, selectedLegacy); //Defining filterIconLegacy
-
-            PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter(Constants.PLUGIN_ID, Constants.MANUFACTURER_NAME, filterIcon, Color.white);
-
-            //filters for all II parts
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "AllParts", string.Format("All {0} Parts", Constants.MANUFACTURER_NAME), filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && !o.title.Contains("(LEGACY)"));
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "CommandPods", "Command Pods", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Pods" && !o.title.Contains("(LEGACY)"));
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Control", "Control", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString().Contains("Control") && !o.title.Contains("(LEGACY)"));
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", filterIcon, p => p.resourceInfos.Exists(q => q.resourceName == "HydrogenProtium" || q.resourceName == "HydrogenDeuterium" || q.resourceName == "HydrogenTritium") && p.manufacturer == Constants.MANUFACTURER_NAME);
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Electrical", "Electrical", filterIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Electrical" && !o.title.Contains("(LEGACY)"));
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", "Engines", filterIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == Constants.MANUFACTURER_NAME);
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "BoostersCL20", "CL-20 Boosters", filterIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == Constants.MANUFACTURER_NAME);
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "WingsIonized", "Ionized Wings", filterIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == Constants.MANUFACTURER_NAME);
-			PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Legacy", "Legacy Parts", filterIconLegacy, v => v.title.Contains("(LEGACY)") && v.manufacturer == Constants.MANUFACTURER_NAME);
-        }
+		}
 
         private void Awake()
         {
