@@ -45,4 +45,4 @@ using System.Runtime.CompilerServices;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 
-[assembly: KSPAssemblyDependency("KSPe", 2, 0)]
+[assembly: KSPAssemblyDependency("KSPe", 2, 1)]
