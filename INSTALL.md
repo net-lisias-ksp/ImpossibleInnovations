@@ -67,7 +67,7 @@ The following file layout must be present after installation:
 
 ### Dependencies
 
-* [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.0 or later
+* [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.1 or later
 	+ Included
 		- (do not overwrite if you download a new version from the Official Distribution Site)
 * Module Manager 3.0.7 or later
