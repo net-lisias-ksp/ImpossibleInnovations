@@ -49,6 +49,7 @@ namespace ImpossibleInnovations
 					user.Save();
 				}
 				{
+					user.Load();
 					string CategoryFilter = user.Node.GetValue("CategoryFilter");
 					switch (CategoryFilter)
 					{
