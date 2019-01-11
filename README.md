@@ -31,6 +31,13 @@ Now under New Management by Lisias. :)
 
 This add in is useful for providing some functions that make interacting with the KSP API functionally nicer and with an improved interface. 
 
+### Configuration
+
+On the folder `<KSP_ROOT>/PluginData/ImpossibleInnovations` you will find a file called `user.cfg` where you can turn off the specialized II Category Filter on the VAB/SPH Advanced Menu. Set it to "NONE" or "CLASSIC" to deactivate or to activate the option.
+
+This feature is useful if you want to use [Community Category Filter](https://forum.kerbalspaceprogram.com/index.php?/topic/149840-discussion-community-category-kit/), as it will declutter the Advanced Menu.
+
+
 ### Sample Crafts
 
 * ![](./PR_material/crafts/II-R.jpg)
