@@ -64,6 +64,10 @@ The following file layout must be present after installation:
 	...
 ```
 
+### Extras Content
+
+* Patches : Optional Module Manager patches
+	+ EDITOR_160.cfg : Patch to add a dummy `bulkheadProfiles` entry on parts without it, to allow these parts to be used in KSP 1.6 and newer.
 
 ### Dependencies
 
