@@ -17,8 +17,6 @@
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
 using System;
-using System.IO;
-using System.Reflection;
 
 using UnityEngine;
 using KSP.UI.Screens;
@@ -37,7 +35,7 @@ namespace ImpossibleInnovations
 		public void Awake()
         {
 			this.icon = this.GenIcons("Impossible Innovations", "SmallLogo", "SmallLogoON");
-			if (Versioning.version_major >= 1 && Versioning.version_minor >= 4)
+			if (Versioning.version_major >= 1 && Versioning.version_minor >= 3)
 			{ 
 				AssetIO.ConfigNode defaults = AssetIO.ConfigNode.ForType<II_Icons>("ImpossibleInnovations", "defaults.cfg");
 				DataIO.ConfigNode user = DataIO.ConfigNode.ForType<II_Icons>("ImpossibleInnovations", "user.cfg");
@@ -99,7 +97,7 @@ namespace ImpossibleInnovations
 				Texture2D normIcon = this.GenIconTexture(iconNameUnselected);
 				Texture2D selIcon = this.GenIconTexture(iconNameSelected);
 	
-				return new Icon(iconName + "_ocon", normIcon, selIcon);
+				return new Icon(iconName + "_icon", normIcon, selIcon);
 			}
 			catch (Exception e)
 			{
@@ -110,10 +108,8 @@ namespace ImpossibleInnovations
 
 		private Texture2D GenIconTexture(string iconName)
 		{
-			Texture2D r = new Texture2D(32, 32, TextureFormat.RGBA32, false);
 			string filename = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/" + iconName + ".png");
-			r.LoadImage(File.ReadAllBytes(filename));
-			return r;
+			return KSPe.Util.Image.Texture2D.LoadFromFile(filename);
 		}
 
     }
