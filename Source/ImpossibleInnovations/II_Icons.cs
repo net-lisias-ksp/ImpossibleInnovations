@@ -1,9 +1,9 @@
 ﻿/*
 	This file is part of Impossible Innovations,
 		(C) 2014-2018 : JandCandO https://spacedock.info/profile/jandcando
-		(C) 2018 Lisias T : http://lisias.net <support@lisias.net>
+		(C) 2018-2019 Lisias T : http://lisias.net <support@lisias.net>
 
-	Impossible Innovations is as follows:
+	Impossible Innovations is licensed as follows:
 
 		* CC BY-NC-SA 4.0 : https://creativecommons.org/licenses/by-nc-sa/4.0/
 
