@@ -15,16 +15,14 @@ To install, place the GameData folder inside your Kerbal Space Program folder:
 	+ `<PACKAGE>/GameData/ImpossibleInnovations` --> `<KSP_ROOT>/GameData/ImpossibleInnovations`
 	+ `<PACKAGE>/Ships` --> `<KSP_ROOT>/Ships`
 		- You can safely overwrite any old files.
-* If (and only if) you **do not** have installed the full package from the Dependencies:
-	+ `<PACKAGE>/GameData/TweakScale` --> `<KSP_ROOT>/GameData/TweakScale`
-	+ `<PACKAGE>/GameData/000_KSPe.dll` --> `<KSP_ROOT>/GameData/000_KSPe.dll`
-	+ `<PACKAGE>/GameData/ModuleManager.3.1.0.dll` --> `<KSP_ROOT>/GameData/ModuleManager.3.1.0.dll`
 
 The following file layout must be present after installation:
 
 ```
 <KSP_ROOT>
 	[GameData]
+		[000_KSPAPIExtensions]
+			...
 		[ImpossibleInnovations]
 			[Parts]
 				...
@@ -42,8 +40,9 @@ The following file layout must be present after installation:
 			NOTICE
 			README.md
 		[TweakScale]
-			[plugins]
-				license.txt
+			[Plugins]
+				...
+			[patches]
 				...
 			DefaultScales.cfg
 			...
@@ -71,13 +70,12 @@ The following file layout must be present after installation:
 
 ### Dependencies
 
-* [KSP API Extensions/L](https://github.com/net-lisias-ksp/KSPAPIExtensions) 2.1 or later
-	+ Included
-		- (do not overwrite if you download a new version from the Official Distribution Site)
-* Module Manager 3.0.7 or later
-	+ Included
-		- Do not unzip this if you use my [Unofficial fork](https://github.com/net-lisias-kspu/ModuleManager). 
-* [TweakScale](https://github.com/net-lisias-ksp/TweakScale) 2.4 or later
-	+ Included
-		- (do not overwrite if you download a new version from the Official Distribution Site)
+* KSPAPIExtensions /L [2.1.0.15](https://github.com/net-lisias-ksp/KSPAPIExtensions/releases/tag/RELEASE%2F2.1.0.15) (for KSP >= 1.2.2 - yeah, anything goes) 
+* [TweakScale](https://forum.kerbalspaceprogram.com/index.php?/topic/179030-*/)
+	+ For KSP 1.3.1, please use [V2.3.7](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files/2490393) .
+	+ For KSP 1.4 or later, use the [latest](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files).
+* [Module Manager](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*)
+	+ Currently, the latest is 4.0.2
+		- [Download](https://ksp.sarbian.com/jenkins/job/ModuleManager/149/artifact/ModuleManager-4.0.2.zip) for KSP >= 1.4
+		- [Download](https://ksp.sarbian.com/jenkins/job/ModuleManager-RO/8/artifact/ModuleManager-4.0.2.zip) for KSP 1.3.1 	
 
