@@ -46,6 +46,7 @@ cp $VERSIONFILE "./GameData/$TARGETDIR"
 cp CHANGE_LOG.md "./GameData/$TARGETDIR"
 cp LICENSE* "./GameData/$TARGETDIR"
 cp NOTICE "./GameData/$TARGETDIR"
+cp INSTALL.md "./GameData/"
 deploy_md README.md
 
 for dll in $PACKAGE ; do
