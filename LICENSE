@@ -1,6 +1,4 @@
-Impossible Innovations is licensed under Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License.
-  Some parts are also double licensed under Lisias' (unofficial) Standard KSP License. See the artifact's headers
-  for more info.
-
-Impossible Innovations uses code adapted from Karbonite by RoverDude under the Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License
-  JandCandO borrowed some code that checks the amount of a resource throughout the entire vessel. Saved him some time.
+Impossible Innovations is licensed as follows:
+	* Model, Textures, Arts and Configs: Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License.
+	* Code, Source Code and MM Patches: double lincensed under Gnu General Public License 2.0 & Lisias' (unofficial) Standard KSP License.
+		+ See the artifact's headers for more info.
