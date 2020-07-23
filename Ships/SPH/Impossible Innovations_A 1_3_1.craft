@@ -2434,9 +2434,9 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
 		defaultTransformScale = (0, 0, 0)
+		currentScale = 0.625
+		defaultScale = 0.625
 		DryCost = 650
 		stagingEnabled = True
 		EVENTS

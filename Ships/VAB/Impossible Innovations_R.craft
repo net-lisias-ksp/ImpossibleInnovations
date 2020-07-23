@@ -302,8 +302,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.25
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176
 		stagingEnabled = True
@@ -1940,8 +1940,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.25
+		defaultScale = 0.625
 		defaultTransformScale = (2, 2, 2)
 		DryCost = 5200
 		stagingEnabled = True
@@ -2388,8 +2388,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
+		currentScale = 0.625
+		defaultScale = 0.625
 		defaultTransformScale = (0, 0, 0)
 		DryCost = 650
 		stagingEnabled = True
@@ -2578,8 +2578,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
+		currentScale = 0.625
+		defaultScale = 0.625
 		defaultTransformScale = (0, 0, 0)
 		DryCost = 650
 		stagingEnabled = True
@@ -2768,8 +2768,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
+		currentScale = 0.625
+		defaultScale = 0.625
 		defaultTransformScale = (0, 0, 0)
 		DryCost = 650
 		stagingEnabled = True
@@ -2958,8 +2958,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 1.25
-		defaultScale = 1.25
+		currentScale = 0.625
+		defaultScale = 0.625
 		defaultTransformScale = (0, 0, 0)
 		DryCost = 650
 		stagingEnabled = True
@@ -4043,8 +4043,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.25
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176.00098
 		stagingEnabled = True
@@ -4776,8 +4776,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.25
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176.00098
 		stagingEnabled = True
@@ -5509,8 +5509,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.25
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176.00098
 		stagingEnabled = True
@@ -5896,8 +5896,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.875
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176
 		stagingEnabled = True
@@ -6283,8 +6283,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.875
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176
 		stagingEnabled = True
@@ -6670,8 +6670,8 @@ PART
 	{
 		name = TweakScale
 		isEnabled = True
-		currentScale = 2.5
-		defaultScale = 1.25
+		currentScale = 1.875
+		defaultScale = 0.625
 		defaultTransformScale = (1.25, 1.25, 1.25)
 		DryCost = 4176
 		stagingEnabled = True
