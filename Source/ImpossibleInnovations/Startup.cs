@@ -16,29 +16,26 @@
 	You should have received a copy of the CC BY-NC-SA 4.0
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
+using UnityEngine;
+
 namespace ImpossibleInnovations
 {
-	/*
-	 * Constants Definition
-	 */
-	static class Constants
+	[KSPAddon(KSPAddon.Startup.Instantly, true)]
+	internal class Startup : MonoBehaviour
 	{
-		/* General rules:
-		 * + Directories *always* end witn "/".
-		 * + Pathnames *never* start with "/".
-		 * + Use Path.Combine where's possible.
-		 */
-		public const string GAMEDATA = "GameData/";
-		public const string PLUGINDATA = "PluginData/";
-		public const string LOCAL = "_LOCAL/";
-		public const string ROOT = "net.lisias.ksp/";
-		public const string BASE = "ImpossibleInnovations/";
-		public const string USERDATA = GAMEDATA + LOCAL;
-
-		public const string PLUGIN_ID = "ImpossibleInnovations";
-		public const string MANUFACTURER_NAME = "Impossible Innovations";
-
-		public const float LIFT_MULTIPLIER = 7.5f;
-		public const float LIFT_HANDICAP = 0.875f;
+		private void Start()
+		{
+			Log.init();
+			Log.force("Version {0}", Version.Text);
+			try
+			{
+				KSPe.Util.Installation.Check<Startup>(typeof(Version));
+			}
+			catch (KSPe.Util.InstallmentException e)
+			{
+				Log.error(e.ToShortMessage());
+				KSPe.Common.Dialogs.ShowStopperAlertBox.Show(e);
+			}
+		}
 	}
 }

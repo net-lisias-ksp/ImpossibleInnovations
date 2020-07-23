@@ -16,29 +16,27 @@
 	You should have received a copy of the CC BY-NC-SA 4.0
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
+using System;
 namespace ImpossibleInnovations
 {
-	/*
-	 * Constants Definition
-	 */
-	static class Constants
+	public static class Util
 	{
-		/* General rules:
-		 * + Directories *always* end witn "/".
-		 * + Pathnames *never* start with "/".
-		 * + Use Path.Combine where's possible.
-		 */
-		public const string GAMEDATA = "GameData/";
-		public const string PLUGINDATA = "PluginData/";
-		public const string LOCAL = "_LOCAL/";
-		public const string ROOT = "net.lisias.ksp/";
-		public const string BASE = "ImpossibleInnovations/";
-		public const string USERDATA = GAMEDATA + LOCAL;
 
-		public const string PLUGIN_ID = "ImpossibleInnovations";
-		public const string MANUFACTURER_NAME = "Impossible Innovations";
+		public static void CalcShipResource(Vessel vessel, string resource, out double currentAmount, out double maxAmount)
+		{
+			currentAmount = maxAmount = 0f;
+			int COUNT = vessel.parts.Count;
+			for (int i = 0; i < COUNT; ++i)
+			{
+				Part p = vessel.parts[i];
+				if (p.Resources.Contains(resource))
+				{
+					PartResource res = p.Resources[resource];
+					currentAmount += (int)res.amount;
+					currentAmount += (int)res.maxAmount;
+				}
+			}
+		}
 
-		public const float LIFT_MULTIPLIER = 7.5f;
-		public const float LIFT_HANDICAP = 0.875f;
 	}
 }

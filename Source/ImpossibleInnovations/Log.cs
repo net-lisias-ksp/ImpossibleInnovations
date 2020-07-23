@@ -1,60 +1,78 @@
 ﻿/*
-Firespitter /L
-Copyright 2013-2018, Andreas Aakvik Gogstad (Snjo)
-Copyright 2018-2019, LisiasT
+	This file is part of Impossible Innovations,
+		(C) 2018-2020 : Lisias T : http://lisias.net <support@lisias.net>
+		(C) 2014-2018 : JandCandO https://spacedock.info/profile/jandcando
 
-    Developers: LisiasT
+	Impossible Innovations is licensed as follows:
+
+		* CC BY-NC-SA 4.0 : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+	And you are allowed to choose the License that better suit your needs.
+
+	Impossible Innovations is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+	You should have received a copy of the CC BY-NC-SA 4.0
+	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
-using UnityEngine;
-
-using Logger = KSPe.Util.Log.Logger;
+using System;
 using System.Diagnostics;
+using UnityEngine;
+using Logger = KSPe.Util.Log.Logger;
+using Level = KSPe.Util.Log.Level;
 
 namespace ImpossibleInnovations
 {
-    public static class Log
-    {
-        private static readonly Logger LOG = Logger.CreateForType<II_Icons>();
+	internal static class Log
+	{
+		private static readonly Logger log = Logger.CreateForType<Startup>();
 
-        public static int debuglevel {
-            get => (int)LOG.level;
-            set => LOG.level = (KSPe.Util.Log.Level)(value % 6);
-        }
+		internal static void init()
+		{
+			log.level =
+#if DEBUG
+                Level.TRACE
+#else
+				Level.INFO
+#endif
+				;
+		}
 
-        public static void log(string format, params object[] @parms)
-        {
-            LOG.force(format, parms);
-        }
+		internal static void force(string msg, params object[] @params)
+		{
+			log.force(msg, @params);
+		}
 
-        public static void detail(string format, params object[] @parms)
-        {
-            LOG.detail(format, parms);
-        }
+		internal static void info(string msg, params object[] @params)
+		{
+			log.info(msg, @params);
+		}
 
-        public static void info(string format, params object[] @parms)
-        {
-            LOG.info(format, parms);
-        }
+		internal static void warn(string msg, params object[] @params)
+		{
+			log.warn(msg, @params);
+		}
 
-        public static void warn(string format, params object[] @parms)
-        {
-            LOG.warn(format, parms);
-        }
+		internal static void detail(string msg, params object[] @params)
+		{
+			log.detail(msg, @params);
+		}
 
-        public static void err(string format, params object[] parms)
-        {
-            LOG.error(format, parms);
-        }
+		internal static void error(string msg, params object[] @params)
+		{
+			log.error(msg, @params);
+		}
 
-        public static void ex(MonoBehaviour offended, System.Exception e)
-        {
-            LOG.error(offended, e);
-        }
+		public static void ex(MonoBehaviour offended, System.Exception e)
+		{
+			log.error(offended, e);
+		}
 
-        [Conditional("DEBUG")]
-        public static void dbg(string format, params object[] @parms)
-        {
-            LOG.dbg(format, parms);
-        }
-    }
+		[ConditionalAttribute("DEBUG")]
+		internal static void dbg(string msg, params object[] @params)
+		{
+			log.trace(msg, @params);
+		}
+	}
 }

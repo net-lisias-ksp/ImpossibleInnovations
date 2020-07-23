@@ -1,7 +1,7 @@
 ﻿/*
 	This file is part of Impossible Innovations,
+		(C) 2018-2020 : Lisias T : http://lisias.net <support@lisias.net>
 		(C) 2014-2018 : JandCandO https://spacedock.info/profile/jandcando
-		(C) 2018-2019 Lisias T : http://lisias.net <support@lisias.net>
 
 	Impossible Innovations is licensed as follows:
 
@@ -13,7 +13,7 @@
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-	You should have received a copy of the GNU General Public License 2.0
+	You should have received a copy of the CC BY-NC-SA 4.0
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
 using System;
