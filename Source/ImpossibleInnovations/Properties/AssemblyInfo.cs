@@ -17,7 +17,6 @@
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
 using System.Reflection;
-using System.Runtime.CompilerServices;
 
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
@@ -27,7 +26,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("net.lisias.ksp")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("© 2016-18 jandcando, ©2018 Lisias T")]
+[assembly: AssemblyCopyright ("©2018-20 LisiasT, ©2016-18 jandcando")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
