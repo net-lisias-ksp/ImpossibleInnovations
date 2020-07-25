@@ -16,28 +16,19 @@
 	You should have received a copy of the CC BY-NC-SA 4.0
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
-namespace ImpossibleInnovations
+using UnityEngine;
+
+namespace ImpossibleInnovations.KSP13
 {
-	/*
-	 * Constants Definition
-	 */
-	public static class Constants
+	internal class Startup
 	{
-		/* General rules:
-		 * + Directories *always* end witn "/".
-		 * + Pathnames *never* start with "/".
-		 * + Use Path.Combine where's possible.
-		 */
-		public const string GAMEDATA = "GameData/";
-		public const string PLUGINDATA = "PluginData/";
-		public const string LOCAL = "_LOCAL/";
-		public const string ROOT = "net.lisias.ksp/";
-		public const string BASE = "ImpossibleInnovations/";
-		public const string USERDATA = GAMEDATA + LOCAL;
+		private void Start()
+		{
+			Log.init();
+			Log.info("Creating AddCustomSubcategoryFilter");
 
-		public const string PLUGIN_ID = "ImpossibleInnovations";
-		public const string MANUFACTURER_NAME = "Impossible Innovations";
-
-		public const float LIFT_MULTIPLIER = 8.576f;
+			II_Icons icons = new II_Icons();
+			icons.DoIt();
+		}
 	}
 }

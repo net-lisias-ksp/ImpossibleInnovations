@@ -22,9 +22,9 @@ using UnityEngine;
 using Logger = KSPe.Util.Log.Logger;
 using Level = KSPe.Util.Log.Level;
 
-namespace ImpossibleInnovations
+namespace ImpossibleInnovations.KSP13
 {
-	public static class Log
+	internal static class Log
 	{
 		private static readonly Logger log = Logger.CreateForType<Startup>();
 
@@ -73,6 +73,11 @@ namespace ImpossibleInnovations
 		internal static void dbg(string msg, params object[] @params)
 		{
 			log.trace(msg, @params);
+		}
+
+		internal static void ex(II_Icons iI_Icons, Exception e)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

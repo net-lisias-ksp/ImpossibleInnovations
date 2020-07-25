@@ -27,90 +27,13 @@ using DataIO = KSPe.IO.Data;
 
 namespace ImpossibleInnovations
 {
-    [KSPAddon(KSPAddon.Startup.MainMenu , true)]
-    public class II_Icons : MonoBehaviour
-    {
-		private Icon icon;
-
-		public void Awake()
-        {
-			this.icon = this.GenIcons("Impossible Innovations", "SmallLogo", "SmallLogoON");
-			if (Versioning.version_major >= 1 && Versioning.version_minor >= 3)
-			{ 
-				AssetIO.ConfigNode defaults = AssetIO.ConfigNode.ForType<II_Icons>("ImpossibleInnovations", "defaults.cfg");
-				DataIO.ConfigNode user = DataIO.ConfigNode.ForType<II_Icons>("ImpossibleInnovations", "user.cfg");
-				if (!user.IsLoadable)
-				{
-					user.Clear();
-					string v = defaults.Load().Node.GetValue("CategoryFilter");
-					user.Node.SetValue("CategoryFilter", v, true);
-					user.Save();
-				}
-				{
-					user.Load();
-					string CategoryFilter = user.Node.GetValue("CategoryFilter");
-					switch (CategoryFilter)
-					{
-						case "CLASSIC":
-							GameEvents.onGUIEditorToolbarReady.Add(addIIfilter);
-							break;
-						case "NONE":
-							break;
-						default:
-							Log.warn("CategoryFilter [{0}] unrecognized on user settings file!", CategoryFilter);
-							break;
-					}
-				}
-			}
-		}
-
-        private void addIIfilter()
-        {
-			try
-			{ 
-				Icon currentPartsIcon = this.GenIcons("II_filter_icon", "SmallLogo", "SmallLogoON");
-	            Icon legacyPartsIcon = this.GenIcons("II_filter_icon_legacy", "SmallLogoGrey", "SmallLogoGreyON");
-
-	            PartCategorizer.Category IIfilter = PartCategorizer.AddCustomFilter(Constants.PLUGIN_ID, Constants.MANUFACTURER_NAME, this.icon, Color.white);
-	
-	            //filters for all II parts
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "AllParts", string.Format("All {0} Parts", Constants.MANUFACTURER_NAME), currentPartsIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && !o.title.Contains("(LEGACY)"));
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "CommandPods", "Command Pods", currentPartsIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Pods" && !o.title.Contains("(LEGACY)"));
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Control", "Control", currentPartsIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString().Contains("Control") && !o.title.Contains("(LEGACY)"));
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Tanks", "Tanks", currentPartsIcon, p => p.resourceInfos.Exists(q => q.resourceName == "HydrogenProtium" || q.resourceName == "HydrogenDeuterium" || q.resourceName == "HydrogenTritium") && p.manufacturer == Constants.MANUFACTURER_NAME);
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Electrical", "Electrical", currentPartsIcon, o => o.manufacturer == Constants.MANUFACTURER_NAME && o.category.ToString() == "Electrical" && !o.title.Contains("(LEGACY)"));
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Engines", "Engines", currentPartsIcon, r => r.title.Contains("Fusion Engine") && r.manufacturer == Constants.MANUFACTURER_NAME);
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "BoostersCL20", "CL-20 Boosters", currentPartsIcon, s => s.resourceInfos.Exists(t => t.resourceName == "CL-20") && s.manufacturer == Constants.MANUFACTURER_NAME);
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "WingsIonized", "Ionized Wings", currentPartsIcon, u => u.title.Contains("Ionized") && !u.title.Contains("(LEGACY)") && u.manufacturer == Constants.MANUFACTURER_NAME);
-				PartCategorizer.AddCustomSubcategoryFilter(IIfilter, "Legacy", "Legacy Parts", legacyPartsIcon, v => v.title.Contains("(LEGACY)") && v.manufacturer == Constants.MANUFACTURER_NAME);
-			}
-			catch (Exception e)
-			{
-				Log.ex(this, e);
-			}
-		}
-
-		private Icon GenIcons(string iconName, string iconNameUnselected, string iconNameSelected)
+	[KSPAddon(KSPAddon.Startup.MainMenu , true)]
+	public class II_Icons : MonoBehaviour
+	{
+		private void Start()
 		{
-			try
-			{
-				Texture2D normIcon = this.GenIconTexture(iconNameUnselected);
-				Texture2D selIcon = this.GenIconTexture(iconNameSelected);
-	
-				return new Icon(iconName + "_icon", normIcon, selIcon);
-			}
-			catch (Exception e)
-			{
-				Debug.LogException(e);
-				return this.icon;
-			}
+			if (KSPe.Util.KSP.Version.Current >= KSPe.Util.KSP.Version.FindByVersion(1,3,0))
+				KSPe.Util.SystemTools.Assembly.LoadFromFileAndStartup("GameData/ImpossibleInnovations/PluginData/KSP-1.3.dll");
 		}
-
-		private Texture2D GenIconTexture(string iconName)
-		{
-			string filename = KSPe.IO.File<II_Icons>.Asset.Solve("Icons/" + iconName + ".png");
-			return KSPe.Util.Image.Texture2D.LoadFromFile(filename);
-		}
-
-    }
+	}
 }
