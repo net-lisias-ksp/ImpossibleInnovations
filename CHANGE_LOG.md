@@ -1,5 +1,15 @@
 # Impossible Innovations :: Change Log
 
+* 2020-0724: 0.8.9.0 (Lisias) for KSP >= 1.3.1
+	+ TweakScale support overhaul
+	+ Part overhaul:
+		- Refactored the parts to reuse Stock assets. Now II looks closer to the KSP you are running!
+			- Smaller package to download as bonus. 
+		- Reworked the Part Categorisation to mimic modern KSP.
+	+ Code Overhaul
+		- Paving the way for seamless supporting new parts 
+		- Paving the way to support previous KSP versions, and shielding the Add'On from eventual changes on future ones.
+	+ KSPe 2.2 or later required.
 * 2019-0728: 0.8.8.6 (Lisias) for KSP >= 1.3.1
 	+ Using KSPe.Util.Image facilities
 		- update to the most recent [KSPAPIExtensions](https://github.com/net-lisias-ksp/KSPAPIExtensions/releases) (2.1.0.15 at the present moment). 
