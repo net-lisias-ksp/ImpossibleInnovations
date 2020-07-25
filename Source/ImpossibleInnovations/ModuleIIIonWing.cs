@@ -16,6 +16,7 @@
 	You should have received a copy of the CC BY-NC-SA 4.0
 	along with Impossible Innovations. If not, see < https://creativecommons.org/>.
 */
+using System;
 using UnityEngine;
 
 namespace ImpossibleInnovations
@@ -44,19 +45,19 @@ namespace ImpossibleInnovations
 		[KSPAction("Wing On")]
 		public void actionWingOn(KSPActionParam param)
 		{
-			wingOn("Active");
+			this.wingOn("Active");
 		}
 
 		[KSPAction("Wing Off")]
 		public void actionWingOff(KSPActionParam param)
 		{
-			wingOff();
+			this.wingOff();
 		}
 
 		[KSPAction("Toggle Wing")]
 		public void actionWingToggle(KSPActionParam param)
 		{
-			wingToggle();
+			this.wingToggle();
 		}
 
 	#endregion
@@ -67,8 +68,8 @@ namespace ImpossibleInnovations
 		[KSPEvent(active = true, guiActive = true, guiActiveEditor = false, guiName = "Toggle Wing")]
 		public void wingToggle()
 		{
-			if (wingActive)	wingOff();
-			else			wingOn();
+			if (this.wingActive)	this.wingOff();
+			else					this.wingOn();
 		}
 
 	#endregion
@@ -76,8 +77,8 @@ namespace ImpossibleInnovations
 
 	#region Attributes
 
-		private ModuleLiftingSurface module;
-		private float defaultdDeflectionLiftCoeff;
+		private ModuleLiftingSurface module = null;
+		private float defaultdDeflectionLiftCoeff = 0f;
 
 	#endregion
 
@@ -88,18 +89,16 @@ namespace ImpossibleInnovations
 		{
 			this.enabled = part.Modules.Contains("ModuleLiftingSurface");
 			if (!this.enabled) return;
-
-			this.module = this.part.Modules.GetModule<ModuleLiftingSurface>();
-			this.defaultdDeflectionLiftCoeff = this.module.deflectionLiftCoeff;
 		}
 
 		private void FixedUpdate()
 		{
 			if (!HighLogic.LoadedSceneIsFlight) return;
+			if (null == this.module) this.OnFirstUpdate();
 
 			if (vessel.srfSpeed < 30 && wingActive) //if vessel speed is below 30 m/s, give full lift at no cost
 			{
-				wingOn("Below min. drain velocity");
+				this.wingOn("Below min. drain velocity");
 
 				this.wingElectricConsumption = 0;
 				return;
@@ -115,15 +114,27 @@ namespace ImpossibleInnovations
 			Util.CalcShipResource(vessel, "ElectricCharge", out electrityAmount, out electrityMaxAmount);
 			if ( electrityAmount >= this.wingElectricConsumption ) //if vessel is on and has enough electricity, wing is on
 			{
-				wingOn();
+				this.wingOn();
 
 				this.wingElectricConsumption = (vessel.srfSpeed * vessel.atmDensity) / this.deflectionLiftCoeff; //electricCharge drain dependent on airspeed and atmospheric density. if either is 0, no electricCharge is drained
-				part.RequestResource("ElectricCharge", TimeWarp.fixedDeltaTime * this.wingElectricConsumption);
+				this.part.RequestResource("ElectricCharge", TimeWarp.fixedDeltaTime * this.wingElectricConsumption);
 				return;
 			}
 
 			// the wing is active (implying there is no electricCharge), then shut wing off
-			wingOff("Not enough electricCharge!");
+			wingOff("Not enough Electric Charge!");
+		}
+
+		private void OnFirstUpdate() // Simulated event
+		{
+			Log.dbg("OnFirtUpdate()");
+
+			// Fetch the needed data on craft spawn, when anything that wanted to change something already did it.
+			// Yeah, TweakScale. :)
+			this.module = this.part.Modules.GetModule<ModuleLiftingSurface>();
+			this.defaultdDeflectionLiftCoeff = this.module.deflectionLiftCoeff;
+
+			Log.dbg("defaultdDeflectionLiftCoeff = {0}", this.defaultdDeflectionLiftCoeff);
 		}
 
 	#endregion
@@ -133,21 +144,23 @@ namespace ImpossibleInnovations
 
 		public void wingOn(string status = "Active")
 		{
-			wingStatus = status;
-			wingActive = true;
+			this.wingStatus = status;
+			this.wingActive = true;
 
 			this.module.deflectionLiftCoeff =
 				this.deflectionLiftCoeff = this.defaultdDeflectionLiftCoeff * Constants.LIFT_MULTIPLIER;
+			Log.dbg("Wing On : deflectionLiftCoeff {0}", this.deflectionLiftCoeff);
 		}
 
 		public void wingOff(string status = "Inactive")
 		{
-			wingStatus = status;
-			wingActive = false;
+			this.wingStatus = status;
+			this.wingActive = false;
 
 			this.wingElectricConsumption = 0;
 			this.module.deflectionLiftCoeff =
 				this.deflectionLiftCoeff = this.defaultdDeflectionLiftCoeff;
+			Log.dbg("Wing Off : deflectionLiftCoeff {0}", this.deflectionLiftCoeff);
 		}
 
 	#endregion
