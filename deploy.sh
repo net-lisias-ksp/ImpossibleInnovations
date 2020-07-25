@@ -10,33 +10,43 @@ check() {
 }
 
 deploy_dev() {
-	local DLL=$1
+	local DLL=$1.dll
 
-	if [ -f "./bin/Release/$DLL.dll" ] ; then
-		cp "./bin/Release/$DLL.dll" "$LIB"
+	if [ -f "./bin/Release/$DLL" ] ; then
+		cp "./bin/Release/$DLL" "$LIB"
 	fi
 }
 
 deploy() {
-	local DLL=$1
+	local DLL=$1.dll
 
-	if [ -f "./bin/Release/$DLL.dll" ] ; then
-		cp "./bin/Release/$DLL.dll" "./GameData/$TARGETBINDIR/"
+	if [ -f "./bin/Release/$DLL" ] ; then
+		cp "./bin/Release/$DLL" "./GameData/$TARGETBINDIR/"
 		if [ -d "${KSP_DEV}/GameData/$TARGETBINDIR/" ] ; then
-			cp "./bin/Release/$DLL.dll" "${KSP_DEV/}GameData/$TARGETBINDIR/"
+			cp "./bin/Release/$DLL" "${KSP_DEV/}GameData/$TARGETBINDIR/"
 		fi
 	fi
-	if [ -f "./bin/Debug/$DLL.dll" ] ; then
+	if [ -f "./bin/Debug/$DLL" ] ; then
 		if [ -d "${KSP_DEV}/GameData/$TARGETBINDIR/" ] ; then
-			cp "./bin/Debug/$DLL.dll" "${KSP_DEV}GameData/$TARGETBINDIR/"
+			cp "./bin/Debug/$DLL" "${KSP_DEV}GameData/$TARGETBINDIR/"
 		fi
 	fi
 }
 
-deploy_md() {
-	local MD=$1
-	#![NxMyyTK.png](./PR_material/img/NxMyyTK.png)
-	sed $MD -e "s/!\\[.\+\\]\\(.\+\\)//g" > "./GameData/$TARGETDIR"/$MD
+deploy_plugindata() {
+	local DLL=$1.dll
+
+	if [ -f "./bin/Release/$DLL" ] ; then
+		cp "./bin/Release/$DLL" "./GameData/$TARGETBINDIR/PluginData"
+		if [ -d "${KSP_DEV}/GameData/$TARGETBINDIR/PluginData" ] ; then
+			cp "./bin/Release/$DLL" "${KSP_DEV/}GameData/$TARGETBINDIR/PluginData"
+		fi
+	fi
+	if [ -f "./bin/Debug/$DLL" ] ; then
+		if [ -d "${KSP_DEV}/GameData/$TARGETBINDIR/PluginData" ] ; then
+			cp "./bin/Debug/$DLL" "${KSP_DEV/}GameData/$TARGETBINDIR/PluginData"
+		fi
+	fi
 }
 
 VERSIONFILE=$PACKAGE.version
@@ -44,12 +54,15 @@ VERSIONFILE=$PACKAGE.version
 check
 cp $VERSIONFILE "./GameData/$TARGETDIR"
 cp CHANGE_LOG.md "./GameData/$TARGETDIR"
+cp README.md  "./GameData/$TARGETDIR"
 cp LICENSE* "./GameData/$TARGETDIR"
 cp NOTICE "./GameData/$TARGETDIR"
-cp INSTALL.md "./GameData/"
-deploy_md README.md
 
-for dll in $PACKAGE ; do
-#    deploy_dev $dll
+for dll in $PD_DLLS ; do
+    deploy_plugindata $dll
+done
+
+for dll in $DLLS ; do
+    deploy_dev $dll
     deploy $dll
 done
