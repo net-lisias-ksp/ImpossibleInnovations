@@ -38,7 +38,6 @@ namespace ImpossibleInnovations
 		public const string PLUGIN_ID = "ImpossibleInnovations";
 		public const string MANUFACTURER_NAME = "Impossible Innovations";
 
-		public const float LIFT_MULTIPLIER = 7.5f;
-		public const float LIFT_HANDICAP = 0.875f;
+		public const float LIFT_MULTIPLIER = 8.576f;
 	}
 }

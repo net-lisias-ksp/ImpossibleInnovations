@@ -145,9 +145,9 @@ namespace ImpossibleInnovations
 			wingStatus = status;
 			wingActive = false;
 
-			wingElectricConsumption = 0;
+			this.wingElectricConsumption = 0;
 			this.module.deflectionLiftCoeff =
-				this.deflectionLiftCoeff = this.defaultdDeflectionLiftCoeff * Constants.LIFT_HANDICAP; //a bit less than a normal wing
+				this.deflectionLiftCoeff = this.defaultdDeflectionLiftCoeff;
 		}
 
 	#endregion
