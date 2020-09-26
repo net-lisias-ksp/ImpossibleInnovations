@@ -60,7 +60,7 @@ And more on [KerbalX](https://kerbalx.com/hangars/44338) (soon also on Steam Wor
 
 Detailed installation instructions are now on its own file (see the [In a Hurry](#in-a-hurry) section) and on the distribution file.
 
-### License
+## License
 
 Impossible Innovations is licensed as follows:
 
@@ -98,8 +98,15 @@ Impossible Innovations is licensed as follows:
 			- NonCommercial : You may not use the material for commercial purposes.
 			- ShareAlike : If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-
 Please note the copyrights and trademarks in [NOTICE](./NOTICE).
+
+### Credits
+
+Contributions From:
+
+* [JandCandO](https://forum.kerbalspaceprogram.com/index.php?/profile/66121-jandcando/) (for creating this Add'On at first place!)
+* [Dungchunker](https://forum.kerbalspaceprogram.com/index.php?/profile/67255-dungchunker/) (For creating the amazing blue models you see)
+* Baconator900 (For previous efforts as one-man testing team)
 
 
 ## References
