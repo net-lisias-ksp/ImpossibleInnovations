@@ -2,7 +2,7 @@
 
 This mod adds some late-game engines and tanks to the game. These parts are fusion-based or use advanced technologies.
 
-Now under Lisias's management. :)
+Now under New Management by Lisias. :)
 
 
 ## Installation Instructions
@@ -63,15 +63,19 @@ The following file layout must be present after installation:
 	...
 ```
 
+### Extras Content
+
+* Patches : Optional Module Manager patches
+	+ EDITOR_160.cfg : Patch to add a dummy `bulkheadProfiles` entry on parts without it, to allow these parts to be used in KSP 1.6 and newer.
+
 ### Dependencies
 
-* KSPe /L [2.4.1.16 or later](https://github.com/net-lisias-ksp/KSPe/releases/) (for KSP >= 1.2.2 - yeah, anything goes) 
+* KSPAPIExtensions /L [2.1.0.15](https://github.com/net-lisias-ksp/KSPAPIExtensions/releases/tag/RELEASE%2F2.1.0.15) (for KSP >= 1.2.2 - yeah, anything goes) 
 * [TweakScale](https://forum.kerbalspaceprogram.com/index.php?/topic/179030-*/)
-	+ For existent KSP 1.3.x installations, please use [V2.3.7](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files/2490393) .
-	+ For new KSP 1.3.x installations, or KSP 1.4.0 or later, use the [latest](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files).
-* Module Manager
-	+ MM/L is recommended, download it from [github](https://github.com/net-lisias-ksp/ModuleManager/releases).
-		- For KSP 1.3.0 to 1.12.3 : download and install ModuleManager-*x.y.z.b*.zip
-		- For KSP 1.2.2: download and install ModuleManager-*x.y.z.b*-**122**.zip
-			- Note the "122" thingy on the end of the filename.
-	+ [Forum's one](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*) is also compatible, if you are masochist enough.
+	+ For KSP 1.3.1, please use [V2.3.7](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files/2490393) .
+	+ For KSP 1.4 or later, use the [latest](https://www.curseforge.com/kerbal/ksp-mods/tweakscale/files).
+* [Module Manager](https://forum.kerbalspaceprogram.com/index.php?/topic/50533-*)
+	+ Currently, the latest is 4.0.2
+		- [Download](https://ksp.sarbian.com/jenkins/job/ModuleManager/149/artifact/ModuleManager-4.0.2.zip) for KSP >= 1.4
+		- [Download](https://ksp.sarbian.com/jenkins/job/ModuleManager-RO/8/artifact/ModuleManager-4.0.2.zip) for KSP 1.3.1 	
+
