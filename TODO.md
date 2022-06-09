@@ -1,10 +1,5 @@
 # Impossible Innovations :: TODO list
 
-* Fix parts that make the ship "jump" up about 900M on the sky
-	+ Probable collision mesh problems
-	+ parts:
-		- Hydrogen Tank
-		- Hydrogen Isotope Converter
 * Revise the Hydrogen Intake to use the dynamic pressure too
 	+ Huge amounts of electricity should be needed at rest.
 * Parts balance:
