@@ -65,6 +65,7 @@
     <Compile Include="Log.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Properties\LegalMamboJambo.cs" />
   </ItemGroup>
 
   <ItemGroup>

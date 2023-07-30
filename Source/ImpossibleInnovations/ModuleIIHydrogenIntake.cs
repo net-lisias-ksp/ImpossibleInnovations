@@ -1,7 +1,7 @@
 ﻿/*
 	This file is part of Impossible Innovations,
-		(C) 2018-2020 : Lisias T : http://lisias.net <support@lisias.net>
-		(C) 2014-2018 : JandCandO https://spacedock.info/profile/jandcando
+		© 2018-2023 : Lisias T : http://lisias.net <support@lisias.net>
+		© 2014-2018 : JandCandO https://spacedock.info/profile/jandcando
 	and it's doubled licensed to you under SKL-1.0 & GPL-2.0
 
 	Impossible Innovations is licensed as follows:

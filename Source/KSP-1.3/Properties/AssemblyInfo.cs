@@ -5,12 +5,12 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle (ImpossibleInnovations.KSP13.Constants.PLUGIN_ID)]
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyDescription ("KSP 1.3 Support for Impossible Innovations")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("net.lisias.ksp")]
-[assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("©2018-20 LisiasT, ©2016-18 jandcando")]
-[assembly: AssemblyTrademark ("")]
+[assembly: AssemblyCompany (ImpossibleInnovations.LegalMamboJambo.Company)]
+[assembly: AssemblyProduct (ImpossibleInnovations.LegalMamboJambo.Product)]
+[assembly: AssemblyCopyright (ImpossibleInnovations.LegalMamboJambo.Copyright)]
+[assembly: AssemblyTrademark (ImpossibleInnovations.LegalMamboJambo.Trademark)]
 [assembly: AssemblyCulture ("")]
 
 // The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".

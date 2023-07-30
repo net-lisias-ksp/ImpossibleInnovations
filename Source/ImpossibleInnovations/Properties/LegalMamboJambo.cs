@@ -26,62 +26,14 @@
 	You should have received a copy of the Creative Commons 4.0 Attribution-NonCommercial-ShareAlike License
 	along with Impossible Innovations. If not, see <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
 */
-using System.Diagnostics;
-using UnityEngine;
-using Logger = KSPe.Util.Log.Logger;
-using Level = KSPe.Util.Log.Level;
-
+using System;
 namespace ImpossibleInnovations
 {
-	public static class Log
+	public static class LegalMamboJambo
 	{
-		private static readonly Logger log = Logger.CreateForType<Startup>();
-
-		internal static void init()
-		{
-			log.level =
-#if DEBUG
-                Level.TRACE
-#else
-				Level.INFO
-#endif
-				;
-		}
-
-		internal static void force(string msg, params object[] @params)
-		{
-			log.force(msg, @params);
-		}
-
-		internal static void info(string msg, params object[] @params)
-		{
-			log.info(msg, @params);
-		}
-
-		internal static void warn(string msg, params object[] @params)
-		{
-			log.warn(msg, @params);
-		}
-
-		internal static void detail(string msg, params object[] @params)
-		{
-			log.detail(msg, @params);
-		}
-
-		internal static void error(string msg, params object[] @params)
-		{
-			log.error(msg, @params);
-		}
-
-		public static void ex(MonoBehaviour offended, System.Exception e)
-		{
-			log.error(offended, e);
-		}
-
-		[ConditionalAttribute("DEBUG")]
-		internal static void dbg(string msg, params object[] @params)
-		{
-			log.trace(msg, @params);
-		}
+		public const string Company = "L Aerospace/KSP Division";
+		public const string Copyright = "Copyright © 2018-2023 LisiasT; ©2016-18 JandCandO";
+		public const string Product = "Impossible Innovations /L";
+		public const string Trademark = "Impossible Innovations™ by JandCandO, LisiasT";
 	}
 }
