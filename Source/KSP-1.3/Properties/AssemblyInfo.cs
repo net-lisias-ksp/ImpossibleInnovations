@@ -26,3 +26,4 @@ using System.Runtime.CompilerServices;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
+[assembly: KSPAssemblyDependency("KSPe", 2, 5)]
